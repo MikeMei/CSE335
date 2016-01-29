@@ -5,26 +5,26 @@
  */
 
 /* 
- * File:   Manager.h
+ * File:   CManager.h
  * Author: laptop-pc
  *
  * Created on January 27, 2016, 5:12 PM
  */
 
-#ifndef MANAGER_H
-#define MANAGER_H
+#ifndef CMANAGER_H
+#define CMANAGER_H
 
-#include "Employee.h"
+#include "CEmployee.h"
 #include <vector>
 
 using std::vector;
 
-class Manager:public Employee {
+class CManager:public CEmployee {
 protected:
-    vector<Employee*> m_group;
+    vector<CEmployee*> m_group;
     string m_departmentName;
 public:
-    Manager() {
+    CManager() {
         m_firstName = "";
         m_lastName = "";
         m_salary = 0;
@@ -32,12 +32,12 @@ public:
         m_departmentName = "";
         
     }
-    Manager(string firstName, 
+    CManager(string firstName, 
              string lastName, 
              unsigned int salary,
              unsigned int hiringYear,
              string departmentName,
-             vector<Employee*> emp) {
+             vector<CEmployee*> emp) {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
@@ -45,7 +45,7 @@ public:
         m_departmentName = departmentName;
         m_group = emp;
     }
-    Manager(Manager& man){
+    CManager(CManager& man){
         m_firstName = man.getFirstName();
         m_lastName = man.getLastName();
         m_salary = man.getSalary();
@@ -64,5 +64,5 @@ public:
         << "Department: "<< m_departmentName << "Subordinates:" << m_group.size() <<endl;
     }
 };
-#endif /* MANAGER_H */
+#endif /* CMANAGER_H */
 

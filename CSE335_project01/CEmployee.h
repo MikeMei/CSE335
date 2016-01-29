@@ -5,14 +5,14 @@
  */
 
 /* 
- * File:   Employee.h
+ * File:   CEmployee.h
  * Author: laptop-pc
  *
  * Created on January 27, 2016, 4:54 PM
  */
 
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#ifndef CEMPLOYEE_H
+#define CEMPLOYEE_H
 
 #include<string>
 #include<iostream>
@@ -20,20 +20,20 @@
 
 using namespace std;
 
-class Employee {
+class CEmployee {
 protected:
     string m_firstName;
     string m_lastName;
     unsigned int m_hiringYear;
     unsigned int m_salary;
 public:
-    Employee() {
+    CEmployee() {
         m_firstName = "";
         m_lastName = "";
         m_hiringYear=0;
         m_salary = 0;
     }
-    Employee(string firstName, 
+    CEmployee(string firstName, 
              string lastName, 
              unsigned int salary,
              unsigned int hiringYear) {
@@ -42,14 +42,14 @@ public:
         m_salary = salary;
         m_hiringYear= hiringYear;
     }
-    Employee(const Employee& otherEmp)
+    CEmployee(const CEmployee& otherEmp)
     {
         m_firstName = otherEmp.getFirstName();
         m_lastName = otherEmp.getLastName();
         m_salary = otherEmp.getSalary();
         m_hiringYear = otherEmp.getHiringYear();
     }
-    Employee operator=(const Employee& otherEmp) {
+    CEmployee operator=(const CEmployee& otherEmp) {
         m_firstName = otherEmp.getFirstName();
         m_lastName = otherEmp.getLastName();
         m_salary = otherEmp.getSalary();
@@ -86,5 +86,5 @@ public:
     }
 };
 
-#endif /* EMPLOYEE_H */
+#endif /* CEMPLOYEE_H */
 

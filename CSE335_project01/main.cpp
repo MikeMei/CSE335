@@ -10,8 +10,8 @@
  *
  * Created on January 27, 2016, 4:46 PM
  */
-#include "Employee.h"
-#include "Manager.h"
+#include "CEmployee.h"
+#include "CManager.h"
 #include <cstdlib>
 #include <ctime>
 
@@ -22,14 +22,14 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     //check default constructors
-    /*
+
     tm hiringYear;
     hiringYear.tm_year=2012;
     vector<CEmployee*> emps;
     CManager mang("SubA_First","SubA_Second",20,hiringYear,"CSE",emps);
     mang.DisplayEmployee();
     cout<<"Default Constructor Check\n\n"; 
-    */
+
     
     //check copy constructors
     /*
