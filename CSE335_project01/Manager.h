@@ -44,6 +44,14 @@ public:
         m_hiringYear= hiringYear;
         m_departmentName = departmentName;
         m_group = emp;
+        
+    Manager(const Manager& man){
+        m_firstName = man.getFirstName();
+        m_lastName = man.getLastName();
+        m_salary = man.getSalary();
+        m_hiringYear = man.getHiringYear();
+        m_departmentName = man.getDepartmentName();
+    }
     }
     virtual void DisplayEmployee () {
         cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
