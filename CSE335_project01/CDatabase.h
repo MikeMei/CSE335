@@ -24,17 +24,27 @@ private:
     vector <CEmployee*>emp_list;
     
 public:
-    void AddRecord(CEmployee emp)
+    void AddRecord(CManager man)
     {
-        emp_list.push_back(emp);
+        emp_list.push_back(man);
     }
     
     void DisplayRecords()
     {
-        for(CEmployee emp:emp_list)
+        for(CEmployee* emp:emp_list)
         {
-            emp.DisplayEmployee();
+            emp->DisplayEmployee();
         }
+    }
+    
+    vector<CEmployee*> getEmployeeDatabase()
+    {
+        return emp_list;
+    }
+    
+    void setEmployeeDatabase(CDatabase emp)
+    {
+        emp_list = emp.getEmployeeDatabase();
     }
 };
 

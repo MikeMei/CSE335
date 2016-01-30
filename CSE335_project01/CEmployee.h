@@ -49,11 +49,12 @@ public:
         m_salary = otherEmp.getSalary();
         m_hiringYear = otherEmp.getHiringYear();
     }
-    CEmployee operator=(const CEmployee& otherEmp) {
+    CEmployee& operator=(const CEmployee& otherEmp) {
         m_firstName = otherEmp.getFirstName();
         m_lastName = otherEmp.getLastName();
         m_salary = otherEmp.getSalary();
         m_hiringYear = otherEmp.getHiringYear();
+        return *this;
     }
     string getFirstName() const{
         return m_firstName;

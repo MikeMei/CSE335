@@ -12,6 +12,7 @@
  */
 #include "CEmployee.h"
 #include "CManager.h"
+#include "CDatabase.h"
 #include <cstdlib>
 #include <ctime>
 
@@ -45,10 +46,8 @@ int main(int argc, char** argv) {
     cout<<"Assignment Operator Check\n\n";
     
     //Add subordinates
-    /*
     emps.push_back(&mang);
     emps.push_back(&mang1);
-    */
     
     //Add records to database
     /*
@@ -65,7 +64,6 @@ int main(int argc, char** argv) {
     hiringYear.tm_year=2002;
     emp_data.AddRecord(new CManager("FirstE","LastE",50,hiringYear,"EGR",emps));
     */
-    
     //display all records
     /*
     emp_data.DisplayRecords();
