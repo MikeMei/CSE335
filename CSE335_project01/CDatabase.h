@@ -24,9 +24,14 @@ private:
     vector <CEmployee*>emp_list;
     
 public:
-    void AddRecord(CManager man)
+    CDatabase(vector<CEmployee*> list)
     {
-        emp_list.push_back(man);
+        emp_list = list;
+    }
+    
+    void AddRecord(CEmployee* emp)
+    {
+        emp_list.push_back(emp);
     }
     
     void DisplayRecords()

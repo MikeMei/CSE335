@@ -31,6 +31,7 @@ public:
         m_hiringYear.tm_year = 1900;
         m_departmentName = "";
         
+        
     }
     CManager(string firstName, 
              string lastName, 
@@ -65,7 +66,11 @@ public:
     virtual void DisplayEmployee () {
         cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
         << "   " <<"Hiring Year: "<< m_hiringYear.tm_year << "     " 
-        << "Department: "<< m_departmentName << "Subordinates:" << m_group.size() <<endl;
+        << "Department: "<< m_departmentName << "Subordinates: " << m_group.size() <<endl;
+        for(CEmployee* temp : m_group)
+        {
+            temp->DisplayEmployee();
+        }
     }
 };
 #endif /* CMANAGER_H */

@@ -50,7 +50,6 @@ int main(int argc, char** argv) {
     emps.push_back(&mang1);
     
     //Add records to database
-    /*
     vector<CEmployee*> allEmp;
     CDatabase emp_data(allEmp);
     hiringYear.tm_year=1998;
@@ -63,11 +62,8 @@ int main(int argc, char** argv) {
     emp_data.AddRecord(new CManager("FirstD","LastD",40,hiringYear,"CHE",emps));
     hiringYear.tm_year=2002;
     emp_data.AddRecord(new CManager("FirstE","LastE",50,hiringYear,"EGR",emps));
-    */
     //display all records
-    /*
     emp_data.DisplayRecords();
-    */
     
     return 0;
 }
