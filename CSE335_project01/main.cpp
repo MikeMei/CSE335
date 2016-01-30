@@ -32,21 +32,17 @@ int main(int argc, char** argv) {
 
     
     //check copy constructors
-    /*
     CManager mang1=mang;
     mang1.DisplayEmployee();
     cout<<"Copy Constructor Check\n\n";
-    */
     
     //check assignment operator
-    /*
     hiringYear.tm_year=2015;
     CManager mang3("SubB_First","SubB_Second",10,hiringYear,"CSE",emps);
     mang3.DisplayEmployee();
     mang1=mang3;
     mang1.DisplayEmployee();
     cout<<"Assignment Operator Check\n\n";
-    */
     
     //Add subordinates
     /*

@@ -28,14 +28,14 @@ public:
         m_firstName = "";
         m_lastName = "";
         m_salary = 0;
-        m_hiringYear= 0;
+        m_hiringYear.tm_year = 1900;
         m_departmentName = "";
         
     }
     CManager(string firstName, 
              string lastName, 
              unsigned int salary,
-             unsigned int hiringYear,
+             tm hiringYear,
              string departmentName,
              vector<CEmployee*> emp) {
         m_firstName = firstName;
@@ -51,16 +51,20 @@ public:
         m_salary = man.getSalary();
         m_hiringYear = man.getHiringYear();
         m_departmentName = man.getDepartmentName();
+        m_group = man.getGroup();
     }
     
     string getDepartmentName() const
     {
         return m_departmentName;
     }
-    
+    vector<CEmployee*> getGroup()
+    {
+        return m_group;
+    }
     virtual void DisplayEmployee () {
         cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
-        << "   " <<"Hiring Year: "<< m_hiringYear << "     " 
+        << "   " <<"Hiring Year: "<< m_hiringYear.tm_year << "     " 
         << "Department: "<< m_departmentName << "Subordinates:" << m_group.size() <<endl;
     }
 };

@@ -24,19 +24,19 @@ class CEmployee {
 protected:
     string m_firstName;
     string m_lastName;
-    unsigned int m_hiringYear;
+    tm m_hiringYear;
     unsigned int m_salary;
 public:
     CEmployee() {
         m_firstName = "";
         m_lastName = "";
-        m_hiringYear=0;
+        m_hiringYear.tm_year = 1900;
         m_salary = 0;
     }
     CEmployee(string firstName, 
              string lastName, 
              unsigned int salary,
-             unsigned int hiringYear) {
+             tm hiringYear) {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
@@ -64,16 +64,16 @@ public:
     unsigned short getSalary() const {
         return m_salary;
     }
-    unsigned short getHiringYear() const {
+    tm getHiringYear() const {
         return m_hiringYear;
     }
     void setFirstName(string firstName) {
         m_firstName = firstName;
     }
-    void gsetLastName(string lastName) {
+    void setLastName(string lastName) {
         m_lastName = lastName;
     }
-    void setHiringYear(unsigned int hiringYear) {
+    void setHiringYear(tm hiringYear) {
         m_hiringYear = hiringYear;
     }
     void setSalary(unsigned int salary)
@@ -82,7 +82,7 @@ public:
     }
     virtual void DisplayEmployee () {
         cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
-             << "   " <<"Hiring Year: "<< m_hiringYear << "     " << endl;
+             << "   " <<"Hiring Year: "<< m_hiringYear.tm_year << "     " << endl;
     }
 };
 
