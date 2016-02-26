@@ -14,7 +14,12 @@
 #ifndef SORTABLEEMPLOYEEDATABASE_H
 #define SORTABLEEMPLOYEEDATABASE_H
 
+#include "SortableVector.h"
+#include "CDatabase.h"
 
+class SortableEmployeeDatabase {
+    
+};
 
 #endif /* SORTABLEEMPLOYEEDATABASE_H */
 
