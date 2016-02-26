@@ -24,8 +24,8 @@ using namespace std;
 class SortableEmployeeDatabase: public SortableVector, public CDatabase {
 public:
     SortableEmployeeDatabase(vector <CEmployee*> EmployeeVector): CDatabase(EmployeeVector) {};
-    virtual unsigned int getSize() const{
-        return emp_list.size(); // datamember from CDatabase
+    virtual unsigned int getSize() const {
+        return getEmployeeDatabase().size();
     }
     virtual void swap(int i, int j){
         CEmployee* temp = emp_list[i];

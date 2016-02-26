@@ -42,7 +42,7 @@ public:
         }
     }
     
-    vector<CEmployee*> getEmployeeDatabase()
+    vector<CEmployee*> getEmployeeDatabase() const
     {
         return emp_list;
     }
@@ -50,6 +50,10 @@ public:
     void setEmployeeDatabase(CDatabase emp)
     {
         emp_list = emp.getEmployeeDatabase();
+    }
+    
+    CEmployee* getEmployee(int i) const{
+        return emp_list[i];
     }
 };
 

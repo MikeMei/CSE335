@@ -18,7 +18,11 @@
 using namespace std;
 
 class SortableBySalary: public SortableEmployeeDatabase {
-    
+public:
+    SortableBySalary(vector <CEmployee*> employeeVector): SortableBySalary(employeeVector) {};
+    virtual bool smaller(int i, int j) const {
+        return getEmployee(i)->getSalary() < getEmployee(j)->getSalary();
+    }
 };
 
 
