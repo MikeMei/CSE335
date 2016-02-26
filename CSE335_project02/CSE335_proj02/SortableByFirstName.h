@@ -14,6 +14,16 @@
 #ifndef SORTABLEBYFIRSTNAME_H
 #define SORTABLEBYFIRSTNAME_H
 
+#include "SortableEmployeeDatabase.h"
+using namespace std;
+
+class SortableByFirstName: public SortableEmployeeDatabase {
+public:
+    SortableByFirstName(vector <CEmployee*> employeeVector): SortableByFirstName(employeeVector) {};
+    virtual bool smaller(int i, int j) const {
+        return getEmployee(i)->getFirstName() < getEmployee(j)->getFirstName();
+    }
+}; 
 
 
 #endif /* SORTABLEBYFIRSTNAME_H */
