@@ -14,6 +14,12 @@
 #ifndef SORTABLEBYSALARY_H
 #define SORTABLEBYSALARY_H
 
+#include "SortableEmployeeDatabase.h"
+using namespace std;
+
+class SortableBySalary: public SortableEmployeeDatabase {
+    
+};
 
 
 #endif /* SORTABLEBYSALARY_H */

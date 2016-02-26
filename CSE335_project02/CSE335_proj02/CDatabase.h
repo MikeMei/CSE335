@@ -20,7 +20,7 @@ using namespace std;
 
 class CDatabase
 {
-private:
+protected:
     vector <CEmployee*>emp_list;
     
 public:
