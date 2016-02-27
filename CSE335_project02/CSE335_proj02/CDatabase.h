@@ -24,6 +24,11 @@ protected:
     vector <CEmployee*>emp_list;
     
 public:
+    /* Default constructor, does nothing 
+     */
+    CDatabase() {
+        
+    }
     /* Constructor for CDatabase
      */
     CDatabase(vector<CEmployee*> list)
