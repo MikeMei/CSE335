@@ -65,20 +65,18 @@ int main(int argc, char** argv)
     
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
-    
-    //cout <<"size of vector: " <<d1.getEmployeeDatabase().size() << endl;
-   
+      
     cout << "************************ Before Sorting" << endl;
     d1.DisplayRecords();
     
     cout << "************************ After Sorting By FirstName Alphabetical" << endl;
-    //SortableByFirstName sbfn(employees);
+    SortableByFirstName sbfn(employees);
     
-    //bsi.sort(&sbfn);
+    bsi.sort(&sbfn);
     d1.DisplayRecords();
     
     cout << "************************ After Sorting By FirstName Reverse Alphabetical" << endl;
-    //bsd.sort(&sbfn);
+    bsd.sort(&sbfn);
     d1.DisplayRecords();
     
     cout << "************************ After Sorting By LastName Alphabetical" << endl;
