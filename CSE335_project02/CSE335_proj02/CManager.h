@@ -21,7 +21,6 @@ using std::vector;
 
 class CManager:public CEmployee {
 protected:
-    vector<CEmployee*> m_group;
     string m_departmentName;
 public:
     CManager() {
@@ -30,21 +29,14 @@ public:
         m_salary = 0;
         m_hiringYear.tm_year = 1900;
         m_departmentName = "";
-        
-        
     }
-    CManager(string firstName, 
-             string lastName, 
-             unsigned int salary,
-             tm hiringYear,
-             string departmentName,
-             vector<CEmployee*> emp) {
+    CManager(string firstName, string lastName, unsigned int salary, tm hiringYear, string departmentName)
+    {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
         m_hiringYear= hiringYear;
         m_departmentName = departmentName;
-        m_group = emp;
     }
     CManager(CManager& man){
         m_firstName = man.getFirstName();
@@ -52,25 +44,16 @@ public:
         m_salary = man.getSalary();
         m_hiringYear = man.getHiringYear();
         m_departmentName = man.getDepartmentName();
-        m_group = man.getGroup();
     }
     
     string getDepartmentName() const
     {
         return m_departmentName;
     }
-    vector<CEmployee*> getGroup()
+    
+    virtual void DisplayEmployee()
     {
-        return m_group;
-    }
-    virtual void DisplayEmployee () {
-        cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
-        << "   " <<"Hiring Year: "<< m_hiringYear.tm_year << "     " 
-        << "Department: "<< m_departmentName << "Subordinates: " << m_group.size() <<endl;
-        for(CEmployee* temp : m_group)
-        {
-            temp->DisplayEmployee();
-        }
+        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear.tm_year << "; " << m_departmentName << endl;
     }
 };
 #endif /* CMANAGER_H */

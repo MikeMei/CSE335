@@ -33,10 +33,8 @@ public:
         m_hiringYear.tm_year = 1900;
         m_salary = 0;
     }
-    CEmployee(string firstName, 
-             string lastName, 
-             unsigned int salary,
-             tm hiringYear) {
+    CEmployee(string firstName, string lastName, unsigned int salary, tm hiringYear)
+    {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
@@ -82,8 +80,7 @@ public:
         m_salary = salary;
     }
     virtual void DisplayEmployee () {
-        cout << m_firstName << " " << m_lastName << "   " << "Salary: " << m_salary
-             << "   " <<"Hiring Year: "<< m_hiringYear.tm_year << "     " << endl;
+        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear.tm_year << endl;
     }
 };
 
