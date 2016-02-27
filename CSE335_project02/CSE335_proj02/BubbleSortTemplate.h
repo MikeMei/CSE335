@@ -14,10 +14,12 @@
 #ifndef BUBBLESORTTEMPLATE_H
 #define BUBBLESORTTEMPLATE_H
 #include "SortableVector.h"
+#include <iostream>
 using namespace std;
 class BubbleSortTemplate {
 public: 
     void sort(SortableVector* sortable) {
+        cout << "SortableVectorTemplate sort called" << endl;
         bool sorted = false;
         int n=sortable->getSize();
         while(!sorted) {

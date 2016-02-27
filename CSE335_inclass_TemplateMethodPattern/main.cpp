@@ -17,6 +17,7 @@
 
 #include "StudentVectorSortable.h"
 #include "StudentVectorSortByGPA.h"
+#include "StudentSortByFirstName.h"
 #include "SortableVector.h"
 #include "BubbleSortTemplate.h"
 #include "BubbleSortDecreasing.h"
@@ -31,6 +32,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+    /*
     IntegerVector iv;
     iv.addInteger(10);
     iv.addInteger(4);
@@ -40,34 +42,26 @@ int main(int argc, char** argv) {
     iv.print();
     cout << endl;
     cout << "************** post-sort" << endl;
+    */
     BubbleSortDecreasing bsd;
-    bsd.sort(&iv);
-    iv.print();
+
+    
     
     Student s1("Henry", "Smith", 1996, 150, 3.5);
     Student s2("John", "Anderson", 1995, 160, 4.0);
     Student s3("Tom", "Cooper", 1997, 120, 3.0);
     
-    StudentVector studentVector;
-    /*
-    studentVector.push_back(&s1);
-    studentVector.push_back(&s2);
-    studentVector.push_back(&s3);
-    
-    StudentVectorSortByGPA svSortedByGPA(studentVector);
-    cout<<"***********Before(GPA)**************"<<endl;
-    svSortedByGPA.print();
-    cout<<"***********After(GPA)**************"<<endl;
-    bsd.sort(&svSortedByGPA);
-    svSortedByGPA.print();
-    
-    StudentVectorSortByFirstName svSortedByGPA(studentVector);
-    cout<<"***********Before(FirstName)**************"<<endl;
-    svSortedByFirstName.print();
-    cout<<"***********After(FirstName)**************"<<endl;
-    bsd.sort(&svSortedByFirstName);
-    svSortedByFirstName.print();
-    */
+    vector<Student*> sv;
+    sv.push_back(&s1);
+    sv.push_back(&s2);
+    sv.push_back(&s3);
+    StudentVector studentVector(sv);
+    cout<<"Before Sorting by First Name"<<endl;
+    studentVector.print();
+    cout<<"After Sorting by First Name"<<endl;
+    StudentVectorSortByFirstName svSBFN(sv);
+    cout<<"test2"<<endl;
+    //bsd.sort(&svSBFN);
     
     
     return 0;

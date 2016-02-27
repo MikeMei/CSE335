@@ -15,11 +15,17 @@
 #define STUDENTSORTBYFIRSTNAME_H
 
 #include "StudentVectorSortable.h"
+#include <iostream>
+using namespace std;
 
 class StudentVectorSortByFirstName: public StudentVectorSortable{
 public:
-    StudentVectorSortByFirstName(vector <Student*> studentVector):
-    StudentVectorSortByFirstName(studentVector){};
+    StudentVectorSortByFirstName(vector <Student*> &students):
+    StudentVectorSortByFirstName(students){
+    cout <<"hello"<<endl; 
+    };
+ 
+    
     virtual bool smaller(int i, int j) const {
         return getStudent(i)->getFirstName() < getStudent(j)->getFirstName();
     }

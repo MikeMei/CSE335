@@ -15,7 +15,6 @@
 #define SORTABLEEMPLOYEEDATABASE_H
 
 #include "SortableVector.h"
-
 #include "CDatabase.h"
 #include <vector>
 using namespace std;
@@ -23,11 +22,12 @@ using namespace std;
 
 class SortableEmployeeDatabase: public SortableVector, public CDatabase {
 public:
-    SortableEmployeeDatabase(vector <CEmployee*> EmployeeVector): CDatabase(EmployeeVector) {};
-    virtual unsigned int getSize() const {
+
+    SortableEmployeeDatabase(vector <CEmployee*> &EmployeeVector): CDatabase(EmployeeVector) {};
+    virtual unsigned int getSize() const  {
         return getEmployeeDatabase().size();
     }
-    virtual void swap(int i, int j){
+    virtual void swap(int i, int j  ){
         CEmployee* temp = emp_list[i];
         emp_list[i] = emp_list[j];
         emp_list[j] = temp;

@@ -53,6 +53,8 @@ public:
     }
     
     CEmployee* getEmployee(int i) const{
+        cout <<"returning employee"<<endl;
+        emp_list[i]->DisplayEmployee();
         return emp_list[i];
     }
 };

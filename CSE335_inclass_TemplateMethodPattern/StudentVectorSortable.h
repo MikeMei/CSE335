@@ -23,8 +23,8 @@ using std::vector;
 
 class StudentVectorSortable: public StudentVector, public SortableVector{
 public:
-    StudentVectorSortable(vector <Student*> studentVector):
-    StudentVector(studentVector){};
+    StudentVectorSortable(vector <Student*> &studentVector): StudentVector(studentVector) {
+    };
     virtual unsigned int getSize() const{
         return m_StudentVector.size();
     }

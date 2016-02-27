@@ -66,44 +66,47 @@ int main(int argc, char** argv)
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
     
+    //cout <<"size of vector: " <<d1.getEmployeeDatabase().size() << endl;
+   
     cout << "************************ Before Sorting" << endl;
     d1.DisplayRecords();
     
     cout << "************************ After Sorting By FirstName Alphabetical" << endl;
-    SortableByFirstName sbfn(employees);
- //   bsi.sort(&sbfn);
- //   d1.DisplayRecords();
+    //SortableByFirstName sbfn(employees);
     
-//    cout << "************************ After Sorting By FirstName Reverse Alphabetical" << endl;
-//    bsd.sort(&sbfn);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting By LastName Alphabetical" << endl;
-//    SortableByLastName sbln(employees);
-//    bsi.sort(&sbln);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting By LastName Reverse Alphabetical" << endl;
-//    bsd.sort(&sbln);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting By Salary Increasing" << endl;
-//    SortableBySalary sbs(employees);
-//    bsi.sort(&sbs);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting By Salary Decreasing" << endl;
-//    bsd.sort(&sbs);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting by Hireyear Increasing" << endl;
-//    SortableByHiringYear sbh(employees);
-//    bsi.sort(&sbh);
-//    d1.DisplayRecords();
-//    
-//    cout << "************************ After Sorting by Hireyear Decreasing" << endl;
-//    bsd.sort(&sbh);
-//    d1.DisplayRecords();
+    //bsi.sort(&sbfn);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting By FirstName Reverse Alphabetical" << endl;
+    //bsd.sort(&sbfn);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting By LastName Alphabetical" << endl;
+    SortableByLastName sbln(employees);
+    bsi.sort(&sbln);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting By LastName Reverse Alphabetical" << endl;
+    bsd.sort(&sbln);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting By Salary Increasing" << endl;
+    SortableBySalary sbs(employees);
+    bsi.sort(&sbs);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting By Salary Decreasing" << endl;
+    bsd.sort(&sbs);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting by Hireyear Increasing" << endl;
+    SortableByHiringYear sbh(employees);
+    bsi.sort(&sbh);
+    d1.DisplayRecords();
+    
+    cout << "************************ After Sorting by Hireyear Decreasing" << endl;
+    bsd.sort(&sbh);
+    d1.DisplayRecords();
 
     return 0;
 }
