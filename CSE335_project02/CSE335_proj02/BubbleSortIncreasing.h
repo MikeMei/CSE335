@@ -6,7 +6,7 @@
 
 /* 
  * File:   BubbleSortIncreasing.h
- * Author: meimicha
+ * Author: inclass
  *
  * Created on February 26, 2016, 1:12 PM
  */

@@ -6,7 +6,7 @@
 
 /* 
  * File:   BubbleSortDecreasing.h
- * Author: School
+ * Author: inclass
  *
  * Created on February 26, 2016, 1:12 PM
  */
