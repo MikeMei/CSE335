@@ -6,7 +6,7 @@
 
 /* 
  * File:   SortableVector.h
- * Author: meimicha
+ * Author: school
  *
  * Created on February 26, 2016, 1:13 PM
  */
