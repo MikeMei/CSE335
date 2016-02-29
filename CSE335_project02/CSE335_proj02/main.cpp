@@ -63,6 +63,7 @@ int main(int argc, char** argv)
     
     CDatabase d1(employees);
     
+    
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
       
@@ -71,41 +72,42 @@ int main(int argc, char** argv)
     
     cout << "************************ After Sorting By FirstName Alphabetical" << endl;
     SortableByFirstName sbfn(employees);
-    
     bsi.sort(&sbfn);
-    d1.DisplayRecords();
+    sbfn.DisplayRecords();
+    
     
     cout << "************************ After Sorting By FirstName Reverse Alphabetical" << endl;
     bsd.sort(&sbfn);
-    d1.DisplayRecords();
+    sbfn.DisplayRecords();
     
+   
     cout << "************************ After Sorting By LastName Alphabetical" << endl;
     SortableByLastName sbln(employees);
     bsi.sort(&sbln);
-    d1.DisplayRecords();
+    sbln.DisplayRecords();
     
     cout << "************************ After Sorting By LastName Reverse Alphabetical" << endl;
     bsd.sort(&sbln);
-    d1.DisplayRecords();
+    sbln.DisplayRecords();
     
     cout << "************************ After Sorting By Salary Increasing" << endl;
     SortableBySalary sbs(employees);
     bsi.sort(&sbs);
-    d1.DisplayRecords();
+    sbs.DisplayRecords();
     
     cout << "************************ After Sorting By Salary Decreasing" << endl;
     bsd.sort(&sbs);
-    d1.DisplayRecords();
+    sbs.DisplayRecords();
     
-    cout << "************************ After Sorting by Hireyear Increasing" << endl;
+    cout << "************************ After Sorting by Hiring year Increasing" << endl;
     SortableByHiringYear sbh(employees);
     bsi.sort(&sbh);
-    d1.DisplayRecords();
+    sbh.DisplayRecords();
     
-    cout << "************************ After Sorting by Hireyear Decreasing" << endl;
+    cout << "************************ After Sorting by Hiring year Decreasing" << endl;
     bsd.sort(&sbh);
-    d1.DisplayRecords();
-
+    sbh.DisplayRecords();
+    
     return 0;
 }
 

@@ -25,7 +25,7 @@ public:
 
     SortableEmployeeDatabase(vector <CEmployee*> &EmployeeVector): CDatabase(EmployeeVector) {};
     virtual unsigned int getSize() const  {
-        return getEmployeeDatabase().size();
+        return getCDatabaseSize();
     }
     virtual void swap(int i, int j  ){
         CEmployee* temp = emp_list[i];

@@ -20,7 +20,7 @@ using namespace std;
 
 class SortableByHiringYear: public SortableEmployeeDatabase {
 public:
-    SortableByHiringYear(vector <CEmployee*> employeeVector): SortableByHiringYear(employeeVector) {};
+    SortableByHiringYear(vector <CEmployee*> employeeVector): SortableEmployeeDatabase(employeeVector) {};
     virtual bool smaller(int i, int j) const {
         return  getEmployee(i)->getHiringYear().tm_year < getEmployee(j)->getHiringYear().tm_year;
         

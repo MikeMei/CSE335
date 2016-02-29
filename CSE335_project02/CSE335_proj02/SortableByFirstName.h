@@ -20,12 +20,18 @@ using namespace std;
 
 class SortableByFirstName: public SortableEmployeeDatabase {
 public:
-    SortableByFirstName(vector <CEmployee*> employeeVector): SortableByFirstName(employeeVector) {
-        cout<<"hi mom"<<endl;
-    };
+
+    SortableByFirstName(vector<CEmployee*> employees): SortableEmployeeDatabase(employees) {
+        
+    }
     virtual bool smaller(int i, int j) const  {
-        cout << "calling smaller" << endl;
-        return getEmployee(i)->getFirstName() < getEmployee(j)->getFirstName();
+        if(getEmployee(i)->getFirstName() < getEmployee(j)->getFirstName() ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        
     }
 }; 
 

@@ -75,9 +75,11 @@ public:
     /* Getter method, returns a CEmployee pointer in emp_list using the index i
      */
     CEmployee* getEmployee(int i) const{
-        cout <<"returning employee"<<endl;
-        emp_list[i]->DisplayEmployee();
+       
         return emp_list[i];
+    }
+    unsigned int getCDatabaseSize() const{
+        return emp_list.size(); 
     }
 };
 

@@ -19,9 +19,9 @@ using namespace std;
 class BubbleSortTemplate {
 public: 
     void sort(SortableVector* sortable) {
-        cout << "SortableVectorTemplate sort called" << endl;
         bool sorted = false;
         int n=sortable->getSize();
+       
         while(!sorted) {
             sorted=true;
             for(int i=1; i<n; i++) {
@@ -32,6 +32,7 @@ public:
             }
             n--;
         }
+        
     }
     virtual bool needSwap(SortableVector* sortableVector, int i, int j)=0;
 };
