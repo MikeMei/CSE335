@@ -19,6 +19,11 @@ using namespace std;
 
 class SortableByLastName: public SortableEmployeeDatabase {
 public:
+    /* Default constructor
+     */
+    SortableByLastName() {};
+    /* Constructor
+     */
     SortableByLastName(vector <CEmployee*> employeeVector): SortableEmployeeDatabase(employeeVector) {};
     virtual bool smaller(int i, int j) const {
         return getEmployee(i)->getLastName() < getEmployee(j)->getLastName();

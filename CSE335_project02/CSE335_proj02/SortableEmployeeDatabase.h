@@ -22,8 +22,15 @@ using namespace std;
 
 class SortableEmployeeDatabase: public SortableVector, public CDatabase {
 public:
-
+    /* Default Constructor
+     */
+    SortableEmployeeDatabase() {};
+    /* Constructor
+     */
     SortableEmployeeDatabase(vector <CEmployee*> &EmployeeVector): CDatabase(EmployeeVector) {};
+    /* Copy Constructor
+     */
+
     virtual unsigned int getSize() const  {
         return getCDatabaseSize();
     }

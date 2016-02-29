@@ -20,7 +20,11 @@ using namespace std;
 
 class SortableByFirstName: public SortableEmployeeDatabase {
 public:
-
+    /* Default Constructor
+     */
+    SortableByFirstName() {};
+    /* Constructor
+     */
     SortableByFirstName(vector<CEmployee*> employees): SortableEmployeeDatabase(employees) {
         
     }
