@@ -25,25 +25,28 @@ class Employee {
 protected:
     string m_firstName;
     string m_lastName;
-    tm m_hiringYear;
+    unsigned int m_hiringYear;
     unsigned int m_salary;
+    unsigned int m_id;
 public:
     /* Default constructor for the CEmployee class, assigns values to 0, hiring year at 1900
      */
     Employee() {
         m_firstName = "";
         m_lastName = "";
-        m_hiringYear.tm_year = 1900;
+        m_hiringYear = 0;
         m_salary = 0;
+        m_id = 0;
     }
     /* Constructor for the CEmployee class, assigns values to data members
      */
-    Employee(string firstName, string lastName, unsigned int salary, tm hiringYear)
+    Employee(string firstName, string lastName, unsigned int salary, unsigned int hiringYear, unsigned int id)
     {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
         m_hiringYear= hiringYear;
+        m_id = id;
     }
     /* Copy Constructor for the CEmployee class, copies by reference
      */
@@ -53,6 +56,7 @@ public:
         m_lastName = otherEmp.getLastName();
         m_salary = otherEmp.getSalary();
         m_hiringYear = otherEmp.getHiringYear();
+        m_id = otherEmp.getId();
     }
     /* operator= for the CEmployee class, does assignment by reference
      */
@@ -61,6 +65,7 @@ public:
         m_lastName = otherEmp.getLastName();
         m_salary = otherEmp.getSalary();
         m_hiringYear = otherEmp.getHiringYear();
+        m_id = otherEmp.getId();
         return *this;
     }
     /* Getter method, returns m_firstName of a CEmployee
@@ -80,8 +85,13 @@ public:
     }
     /* Getter method, returns m_hiringYear of a CEmployee
      */
-    tm getHiringYear() const {
+    unsigned int getHiringYear() const {
         return m_hiringYear;
+    }
+    /* Getter for id
+     */
+    unsigned int getId() const {
+        return m_id;
     }
     /* Setter method, sets m_firstName of a CEmployee
      */
@@ -95,7 +105,7 @@ public:
     }
     /* Setter method, sets m_HiringYear of a CEmployee
      */
-    void setHiringYear(tm hiringYear) {
+    void setHiringYear(unsigned int hiringYear) {
         m_hiringYear = hiringYear;
     }
     /* Setter method, sets m_salary of a CEmployee
@@ -104,10 +114,15 @@ public:
     {
         m_salary = salary;
     }
+    /* Set id
+     */
+    void setId(unsigned int id) {
+        m_id = id;
+    }
     /* Displays the data members of a CEmployee using cout
      */
     virtual void DisplayEmployee () const{
-        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear.tm_year << endl;
+        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear << endl;
     }
 };
 

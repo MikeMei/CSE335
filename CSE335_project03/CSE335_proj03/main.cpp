@@ -6,7 +6,7 @@
 #include "SumsalaryVisitor.h"
 
 int main(int argc, char *argv[]) {
-    /*
+    
     Employee JohnSmith1("John","Smith1",10000,2011, 1);
     Employee JohnSmith2("John","Smith2",20000,2012,2);
     Employee JohnSmith3("John","Smith3",30000, 2013,3);
@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     Employee JohnDoe3("John", "Doe3", 35000, 2012,8);
     Manager AliceCooperManager("Alice","Cooper",45000, 2000, 9,2);
 
-
+     /*
 
     cout<<"===================================================== Test Visitor Pattern"<<endl;
     Group group1("Group1");

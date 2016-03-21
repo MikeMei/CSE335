@@ -22,7 +22,7 @@ using namespace std;
 
 class Manager:public Employee {
 protected:
-    string m_departmentName;
+    unsigned int m_rank;
 public:
     /* Default Constructor for CManager
      */
@@ -30,18 +30,20 @@ public:
         m_firstName = "";
         m_lastName = "";
         m_salary = 0;
-        m_hiringYear.tm_year = 1900;
-        m_departmentName = "";
+        m_hiringYear = 0;
+        m_id = 0;
+        m_rank = 0;
     }
     /* Constructor for CManager
      */
-    Manager(string firstName, string lastName, unsigned int salary, tm hiringYear, string departmentName)
+    Manager(string firstName, string lastName, unsigned int salary, unsigned int hiringYear, unsigned int id, unsigned int rank)
     {
         m_firstName = firstName;
         m_lastName = lastName;
         m_salary = salary;
         m_hiringYear= hiringYear;
-        m_departmentName = departmentName;
+        m_id = id;
+        m_rank = rank;
     }
     /* Copy Constructor for CManager, copy by reference
      */
@@ -50,7 +52,8 @@ public:
         m_lastName = man.getLastName();
         m_salary = man.getSalary();
         m_hiringYear = man.getHiringYear();
-        m_departmentName = man.getDepartmentName();
+        m_id = man.getId();
+        m_rank = man.getRank();
     }
     /* operator= Constructor for CManager
      */
@@ -59,21 +62,17 @@ public:
         m_lastName = man.getLastName();
         m_salary = man.getSalary();
         m_hiringYear = man.getHiringYear();
-        m_departmentName = man.getDepartmentName();
+        m_id = man.getId();
+        m_rank = man.getRank();
         return *this;
     }
-    /* Getter method for CManager, returns the value of m_departmentName
+
+    /* Getter for rank
      */
-    string getDepartmentName() const
-    {
-        return m_departmentName;
+    unsigned int getRank() const{
+        return m_rank;
     }
-    /* Displays a CManager, overrides the version in CEmployee
-     */
-    virtual void DisplayEmployee() const
-    {
-        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear.tm_year << "; " << m_departmentName << endl;
-    }
+
 };
 
 
