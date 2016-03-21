@@ -15,6 +15,7 @@
 #define EMPLOYEE_H
 
 #include "Unit.h"
+#include "Visitor.h"
 #include<string>
 #include<iostream>
 #include<ctime>
@@ -119,7 +120,11 @@ public:
     void setId(unsigned int id) {
         m_id = id;
     }
-
+    
+    
+    /* Visitor pattern
+     */
+    virtual void accept(Visitor* v) {v->visitEmployee(this);}; 
 };
 
 #endif /* EMPLOYEE_H */

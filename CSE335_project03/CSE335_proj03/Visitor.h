@@ -14,11 +14,13 @@
 #ifndef VISITOR_H
 #define VISITOR_H
 
-#include "Employee.h"
-#include "Manager.h"
-#include "Group.h"
-#include "Department.h"
+//#include "Unit.h"
+//#include "Employee.h"
+//#include "Manager.h"
+//#include "Group.h"
+//#include "Department.h"
 
+class Unit;
 class Employee;
 class Manager;
 class Group;

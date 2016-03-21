@@ -13,12 +13,14 @@
 
 #ifndef UNIT_H
 #define UNIT_H
-
+#include "Visitor.h"
+using namespace std;
 class Unit{
     //default constructor, does nothing
     Unit() {
         
     }
+    virtual void accept(Visitor* v) = 0;
 };
 
 #endif /* UNIT_H */
