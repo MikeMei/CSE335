@@ -23,7 +23,7 @@ using namespace std;
 class Group
 {
 protected:
-    vector <Employee*>emp_list;
+    vector <Unit*>emp_list;
     string m_name;
     
 public:
@@ -57,7 +57,7 @@ public:
     }
     /* Getter method, returns the list of CEmployee pointers in CDatabase
      */
-    vector<Employee*> getEmployeeDatabase() const
+    vector<Unit*> getEmployeeDatabase() const
     {
         return emp_list;
     }
