@@ -10,6 +10,8 @@
       <itemPath>Manager.h</itemPath>
       <itemPath>PrintVisitor.h</itemPath>
       <itemPath>SumsalaryVisitor.h</itemPath>
+      <itemPath>Unit.h</itemPath>
+      <itemPath>Visitor.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -57,6 +59,10 @@
       </item>
       <item path="SumsalaryVisitor.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Unit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Visitor.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -91,6 +97,10 @@
       <item path="PrintVisitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SumsalaryVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Unit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Visitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

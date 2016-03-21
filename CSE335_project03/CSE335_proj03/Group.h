@@ -32,13 +32,13 @@ public:
     Group() {
         
     }
-    /* Constructor for CDatabase
+    /* Constructor for Group
      */
     Group(string name)
     {
         m_name = name;
     }
-    /* Copy Constructor for CDatabase
+    /* Copy Constructor for Group
      */
     Group(const Group &otherGroup) {
         emp_list = otherGroup.getEmployeeDatabase();
@@ -49,20 +49,11 @@ public:
         emp_list = otherDB.getEmployeeDatabase();
         return *this;
     }
-    /* Setter method for CDatabase, adds a CEmployee pointer to the vector emp_list
+    /* Setter method for Group, adds an Employee pointer to the vector emp_list
      */
     void AddGroupMember(Employee* emp)
     {
         emp_list.push_back(emp);
-    }
-    /* Displays all employees in emp_list by calling the DisplayEmployee method in the CEmployee class
-     */
-    void DisplayRecords()
-    {
-        for(Employee* emp:emp_list)
-        {
-            emp->DisplayEmployee();
-        }
     }
     /* Getter method, returns the list of CEmployee pointers in CDatabase
      */

@@ -14,14 +14,14 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-
+#include "Unit.h"
 #include<string>
 #include<iostream>
 #include<ctime>
 
 using namespace std;
 
-class Employee {
+class Employee: public Unit {
 protected:
     string m_firstName;
     string m_lastName;
@@ -119,11 +119,7 @@ public:
     void setId(unsigned int id) {
         m_id = id;
     }
-    /* Displays the data members of a CEmployee using cout
-     */
-    virtual void DisplayEmployee () const{
-        cout << m_firstName << " " << m_lastName << "; " << m_salary << "; " << m_hiringYear << endl;
-    }
+
 };
 
 #endif /* EMPLOYEE_H */
