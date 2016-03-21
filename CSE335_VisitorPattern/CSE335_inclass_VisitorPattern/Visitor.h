@@ -13,7 +13,9 @@
 
 #ifndef VISITOR_H
 #define VISITOR_H
-
+/* Forward declaration must be in the visitor class
+ * Compiler needs to know what File and Directory are
+ */
 class File;
 class Directory;
 
