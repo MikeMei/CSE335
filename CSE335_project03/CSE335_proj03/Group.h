@@ -17,12 +17,14 @@
 #include <iostream>
 #include "Employee.h"
 #include "Manager.h"
+#include <string>
 using namespace std;
 
 class Group
 {
 protected:
     vector <Employee*>emp_list;
+    string m_name;
     
 public:
     /* Default constructor, does nothing 
@@ -32,9 +34,9 @@ public:
     }
     /* Constructor for CDatabase
      */
-    Group(vector<Employee*> list)
+    Group(string name)
     {
-        emp_list = list;
+        m_name = name;
     }
     /* Copy Constructor for CDatabase
      */
