@@ -20,7 +20,7 @@
 #include "Employee.h"
 #include "Manager.h"
 using namespace std;
-class Department: public Group {
+class Department: public Unit {
 protected:
     string m_departmentName;
     vector<Group*> m_department;

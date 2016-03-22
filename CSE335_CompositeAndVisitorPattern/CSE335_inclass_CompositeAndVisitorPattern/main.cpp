@@ -44,12 +44,12 @@ int main(int argc, char** argv) {
     ex->Accept(&ev);
     ex->Accept(&pv);
     
-    cout << endl;
-    cout << "New: " << ev.getValue() << endl;
-    exleft ->Accept(&ev);
-    cout << "New: " << ev.getValue() << endl;
-    exleftright ->Accept(&ev);
-    cout << "New: " << ev.getValue() << endl;
+    //cout << endl;
+    //cout << "New: " << ev.getValue() << endl;
+    //exleft ->Accept(&ev);
+    //cout << "New: " << ev.getValue() << endl;
+    //exleftright ->Accept(&ev);
+    //cout << "New: " << ev.getValue() << endl;
     
     
     return 0;

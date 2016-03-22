@@ -20,7 +20,7 @@
 #include <string>
 using namespace std;
 
-class Group
+class Group: public Unit
 {
 protected:
     vector <Unit*>emp_list;
