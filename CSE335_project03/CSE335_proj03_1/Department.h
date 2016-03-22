@@ -23,12 +23,12 @@ using namespace std;
 class Department: public Unit {
 protected:
     string m_departmentName;
-    vector<Group*> m_department;
+    vector<Unit*> m_department;
     
 public:
     //default constructor
     Department() {
-    
+        m_departmentName = "";  
     }
     // one arg constructor
     Department(string departmentName) {
