@@ -34,13 +34,10 @@ public:
              <<", ID: " << man->getId() <<", Rank: "<< man->getRank() << endl;        
     }
     virtual void visitGroup(Group* grp) {
-        cout <<"Group: " << grp->getGroupName() << " : " << endl;
-        for(int i = 0; i<grp->getGroupSize(); i++) {
-            grp->getEmployee(i)->Accept(this);
-        }
+        cout <<"Group: " << endl;
     }
     virtual void visitDepartment(Department* depart) {
-        cout <<"Department: " << depart->getDepartmentName() <<" : "<<endl;
+        
     }
 };
 

@@ -43,18 +43,6 @@ public:
         temp_group.addGroupMember(emp);
         m_department.push_back(&temp_group);
     }
-    unsigned int getDepartmentSize() const{
-        return m_department.size();
-    }
-    vector<Group*> getDepartment() {
-        return m_department;
-    }
-    Group* getDepartmentAtIndex(unsigned int i) {
-        return m_department[i];
-    }
-    string getDepartmentName() {
-        return m_departmentName;
-    }
     virtual void Accept(Visitor* v) {v->visitDepartment(this);};
 };
 

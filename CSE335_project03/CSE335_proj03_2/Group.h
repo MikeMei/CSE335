@@ -43,13 +43,13 @@ public:
     Group(const Group &otherGroup) {
         emp_list = otherGroup.getEmployeeGroup();
     }
-    /* operator= for Group
+    /* operator= for CDatabase
      */
     Group operator=(const Group &otherGroup) {
         emp_list = otherGroup.getEmployeeGroup();
         return *this;
     }
-    /* add an employee to group
+    /* Setter method for Group, adds an Employee pointer to the vector emp_list
      */
     void addGroupMember(Employee* emp)
     {
@@ -71,12 +71,6 @@ public:
     Unit* getEmployee(int i) const{
        
         return emp_list[i];
-    }
-    string getGroupName() const{
-        return m_name;
-    }
-    unsigned int getGroupSize() const {
-        return emp_list.size();
     }
 
     virtual void Accept(Visitor* v) {v->visitGroup(this);};

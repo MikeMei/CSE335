@@ -49,9 +49,9 @@ int main(int argc, char *argv[]) {
     salesDept.Accept(&sv);
     
     cout<<"Total Salary = "<<sv.getTotalSalary()<<endl;
-    
+    /*
     sv.restTotalSalary();
     
-    
+    */
 }
     

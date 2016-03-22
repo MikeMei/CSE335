@@ -21,7 +21,7 @@
 #include "Department.h"
 class SumsalaryVisitor: public Visitor {
 protected:
-    unsigned int totalSalary=0;
+    unsigned int totalSalary;
 public:
     virtual void visitEmployee(Employee* emp) {
         totalSalary += emp->getSalary();
@@ -33,15 +33,10 @@ public:
         
     }
     virtual void visitDepartment(Department* depart) {
-        for(int i = 0; i<depart->getDepartmentSize(); i++) {
-            depart->getDepartmentAtIndex(i)->Accept(this);
-        }
+        
     }
     unsigned int getTotalSalary() const {
         return totalSalary;
-    }
-    void restTotalSalary() {
-        totalSalary = 0;
     }
 };
 

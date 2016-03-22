@@ -120,9 +120,7 @@ public:
     void setId(unsigned int id) {
         m_id = id;
     }
-    void printEmployee() const {
-        cout<< "hi" << endl;
-    }
+    
     
     /* Visitor pattern
      */
