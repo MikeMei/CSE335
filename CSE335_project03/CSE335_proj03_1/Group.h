@@ -23,7 +23,7 @@ using namespace std;
 class Group: public Unit
 {
 protected:
-    vector <Unit*>emp_list;
+    vector <Employee*>emp_list;
     string m_name;
     
 public:
@@ -57,7 +57,7 @@ public:
     }
     /* Getter method, 
      */
-    vector<Unit*> getEmployeeGroup() const
+    vector<Employee*> getEmployeeGroup() const
     {
         return emp_list;
     }
@@ -68,7 +68,7 @@ public:
     }
     /* Getter method, returns a CEmployee pointer in emp_list using the index i
      */
-    Unit* getEmployee(int i) const{
+    Employee* getEmployee(int i) const{
        
         return emp_list[i];
     }

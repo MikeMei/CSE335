@@ -38,18 +38,14 @@ public:
     void addDepartmentMember(Unit* unit) {
         m_department.push_back(unit);
     }
-    void addDepartmentMember(Employee* emp) {
-        Group temp_group;
-        temp_group.addGroupMember(emp);
-        m_department.push_back(&temp_group);
-    }
+
     unsigned int getDepartmentSize() const{
         return m_department.size();
     }
     vector<Unit*> getDepartment() {
         return m_department;
     }
-    Group* getDepartmentAtIndex(unsigned int i) {
+    Unit* getDepartmentAtIndex(unsigned int i) {
         return m_department[i];
     }
     string getDepartmentName() {

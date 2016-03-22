@@ -24,23 +24,30 @@ using namespace std;
 class PrintVisitor: public Visitor {
 public: 
     virtual void visitEmployee(Employee* emp) {
-        cout << "Employee: " << emp->getFirstName() <<" "<< emp->getLastName()
+        
+        cout <<"            Employee: "<< emp->getFirstName() <<" "<< emp->getLastName()
              <<", Salary: " << emp->getSalary() <<", Hiring Year: " << emp->getHiringYear()
              <<", ID: " << emp->getId() << endl;
+        
     }
     virtual void visitManager(Manager* man) {
-        cout << "Manager: " << man->getFirstName() <<" "<< man->getLastName()
+        cout <<"            Manager: " << man->getFirstName() <<" "<< man->getLastName()
              <<", Salary: " << man->getSalary() <<", Hiring Year: " << man->getHiringYear()
-             <<", ID: " << man->getId() <<", Rank: "<< man->getRank() << endl;        
+             <<", ID: " << man->getId() <<", Rank: "<< man->getRank() << endl;  
+              
     }
-    virtual void visitGroup(Group* grp) {
-        cout <<"Group: " << grp->getGroupName() << " : " << endl;
-        for(int i = 0; i<grp->getGroupSize(); i++) {
-            grp->getEmployee(i)->Accept(this);
+    virtual void visitGroup(Group* group) {
+        cout <<"Group: " << group->getGroupName() << " : " << endl;
+        for(int i = 0; i<group->getGroupSize() ; i++) {
+            group->getEmployee(i)->Accept(this);
         }
+        
     }
     virtual void visitDepartment(Department* depart) {
         cout <<"Department: " << depart->getDepartmentName() <<" : "<<endl;
+        for(int i = 0; i<depart->getDepartmentSize(); i++) {
+            depart->getDepartmentAtIndex(i)->Accept(this);
+        }
     }
 };
 

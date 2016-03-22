@@ -44,13 +44,13 @@ int main(int argc, char *argv[]) {
     
     salesDept.Accept(&pv);
 
-    SumsalaryVisitor sv;
+    //SumsalaryVisitor sv;
     
-    salesDept.Accept(&sv);
+    //salesDept.Accept(&sv);
     
-    cout<<"Total Salary = "<<sv.getTotalSalary()<<endl;
+    //cout<<"Total Salary = "<<sv.getTotalSalary()<<endl;
     
-    sv.restTotalSalary();
+    //sv.restTotalSalary();
     
     
 }
