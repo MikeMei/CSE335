@@ -49,7 +49,7 @@ public:
         m_hiringYear= hiringYear;
         m_id = id;
     }
-    /* Copy Constructor for the CEmployee class, copies by reference
+    /* Copy Constructor for the Employee class, copies by reference
      */
     Employee(const Employee& otherEmp)
     {
@@ -59,7 +59,7 @@ public:
         m_hiringYear = otherEmp.getHiringYear();
         m_id = otherEmp.getId();
     }
-    /* operator= for the CEmployee class, does assignment by reference
+    /* operator= for the Employee class, does assignment by reference
      */
     Employee& operator=(const Employee& otherEmp) {
         m_firstName = otherEmp.getFirstName();

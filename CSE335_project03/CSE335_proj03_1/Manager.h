@@ -24,7 +24,7 @@ class Manager:public Employee {
 protected:
     unsigned int m_rank;
 public:
-    /* Default Constructor for CManager
+    /* Default Constructor for Manager
      */
     Manager() {
         m_firstName = "";
@@ -34,7 +34,7 @@ public:
         m_id = 0;
         m_rank = 0;
     }
-    /* Constructor for CManager
+    /* Constructor for Manager
      */
     Manager(string firstName, string lastName, unsigned int salary, unsigned int hiringYear, unsigned int id, unsigned int rank)
     {
@@ -45,7 +45,7 @@ public:
         m_id = id;
         m_rank = rank;
     }
-    /* Copy Constructor for CManager, copy by reference
+    /* Copy Constructor for Manager, copy by reference
      */
     Manager(Manager& man){
         m_firstName = man.getFirstName();
@@ -55,7 +55,7 @@ public:
         m_id = man.getId();
         m_rank = man.getRank();
     }
-    /* operator= Constructor for CManager
+    /* operator= Constructor for Manager
      */
     Manager& operator=(const Manager& man){
         m_firstName = man.getFirstName();

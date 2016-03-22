@@ -61,20 +61,22 @@ public:
     {
         return emp_list;
     }
-    /* Setter method, sets the vector<CEmployee*> equal to another CDatabase*/
+    /* Setter method, sets the vector<Employee*> equal to another group*/
     void setEmployeeGroup(Group emp)
     {
         emp_list = emp.getEmployeeGroup();
     }
-    /* Getter method, returns a CEmployee pointer in emp_list using the index i
+    /* Getter method, returns a Employee pointer in emp_list using the index i
      */
     Employee* getEmployee(int i) const{
        
         return emp_list[i];
     }
+    // returns m_name
     string getGroupName() const{
         return m_name;
     }
+    // returns emp_list.size()
     unsigned int getGroupSize() const {
         return emp_list.size();
     }

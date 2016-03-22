@@ -34,22 +34,43 @@ public:
     Department(string departmentName) {
         m_departmentName = departmentName;
     }
+    //copy constructor
+    Department(const Department &other) {
+        m_departmentName = other.getDepartmentName();
+        m_department = other.getDepartment();
+    }
+    //assignment operator
+    Department operator=(const Department &other) {
+        m_departmentName = other.getDepartmentName();
+        m_department = other.getDepartment();
+        return *this;
+    }
     //overloaded methods
     void addDepartmentMember(Unit* unit) {
         m_department.push_back(unit);
     }
-
+    //retrieves m_department.size()
     unsigned int getDepartmentSize() const{
         return m_department.size();
     }
-    vector<Unit*> getDepartment() {
+    //returns m_department
+    vector<Unit*> getDepartment() const {
         return m_department;
     }
-    Unit* getDepartmentAtIndex(unsigned int i) {
+    /* Retrieves a unit from a vector of units, m_department
+     */
+    Unit* getDepartmentAtIndex(unsigned int i) const {
         return m_department[i];
     }
-    string getDepartmentName() {
+    /* Getter for m_departmentName
+     */
+    string getDepartmentName() const{
         return m_departmentName;
+    }
+    /* Setter for m_departmentName
+     */
+    void setDepartmentName(string name)  {
+        m_departmentName = name;
     }
     virtual void Accept(Visitor* v) {v->visitDepartment(this);};
 };
