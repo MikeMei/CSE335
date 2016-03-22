@@ -55,7 +55,7 @@ public:
     {
         emp_list.push_back(emp);
     }
-    /* Getter method, returns the list of CEmployee pointers in CDatabase
+    /* Getter method, 
      */
     vector<Unit*> getEmployeeGroup() const
     {

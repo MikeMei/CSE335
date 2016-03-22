@@ -35,8 +35,8 @@ public:
         m_departmentName = departmentName;
     }
     //overloaded methods
-    void addDepartmentMember(Group* aGroup) {
-        m_department.push_back(aGroup);
+    void addDepartmentMember(Unit* unit) {
+        m_department.push_back(unit);
     }
     void addDepartmentMember(Employee* emp) {
         Group temp_group;
@@ -46,7 +46,7 @@ public:
     unsigned int getDepartmentSize() const{
         return m_department.size();
     }
-    vector<Group*> getDepartment() {
+    vector<Unit*> getDepartment() {
         return m_department;
     }
     Group* getDepartmentAtIndex(unsigned int i) {
