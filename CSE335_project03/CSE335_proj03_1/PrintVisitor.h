@@ -37,14 +37,14 @@ public:
               
     }
     virtual void visitGroup(Group* group) {
-        cout <<"Group: " << group->getGroupName() << " : " << endl;
+        cout <<"Group Name: " << group->getGroupName() << " : " << endl;
         for(int i = 0; i<group->getGroupSize() ; i++) {
             group->getEmployee(i)->Accept(this);
         }
         
     }
     virtual void visitDepartment(Department* depart) {
-        cout <<"Department: " << depart->getDepartmentName() <<" : "<<endl;
+        cout <<"Department Name: " << depart->getDepartmentName() <<" : "<<endl;
         for(int i = 0; i<depart->getDepartmentSize(); i++) {
             depart->getDepartmentAtIndex(i)->Accept(this);
         }

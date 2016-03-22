@@ -30,7 +30,9 @@ public:
         totalSalary += man->getSalary();
     }
     virtual void visitGroup(Group* group) {
-        
+        for(int i = 0; i<group->getGroupSize(); i++) {
+            group->getEmployee(i)->Accept(this);
+        }
     }
     virtual void visitDepartment(Department* depart) {
         for(int i = 0; i<depart->getDepartmentSize(); i++) {
