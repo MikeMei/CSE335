@@ -1,0 +1,11 @@
+-Project 3
+
+Group Members/Netid:
+
+	-Michael Mei: meimicha
+	-Srikar Bollavaram: bollavar
+
+Contributions:
+
+	-Michael: Planning, Coding of: Visitor, Unit, PrintVisitor, Manager, Group, Employee, General deubgging
+	-Srikar: Planning, UML, Coding of: SumsalaryVisitor, Department, General debugging
