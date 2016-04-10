@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=project3
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/project3
+CND_ARTIFACT_NAME_Debug=cse335_builderpattern
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/cse335_builderpattern
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=project3.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/project3.tar
+CND_PACKAGE_NAME_Debug=cse335builderpattern.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/cse335builderpattern.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=project3
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/project3
+CND_ARTIFACT_NAME_Release=cse335_builderpattern
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/cse335_builderpattern
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=project3.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/project3.tar
+CND_PACKAGE_NAME_Release=cse335builderpattern.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/cse335builderpattern.tar
 #
 # include compiler specific variables
 #
