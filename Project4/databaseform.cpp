@@ -21,18 +21,22 @@ void DatabaseForm::on_AddRecordButton_clicked()
     AddRecordForm* form = new AddRecordForm(this);
     form->show();
     form->setWindowTitle("Add Record Form");
+    int res = form->exec();
+    if(res == QDialog::Rejected)
+    {
+        return;
+    }
+    QString First = form->getFirstName();
+    QString Last = form->getLastName();
+    QString Salary = form->getSalary();
+    QString Hire = form->getHiringYear();
 
-//    QString First = form->getFirstName();
-//    QString Last = form->getLastName();
-//    QString Salary = form->getSalary();
-//    QString Hire = form->getHiringYear();
+    ui->DataTable->insertRow(ui->DataTable->rowCount());
+    int rowCounter = ui->DataTable->rowCount()-1;
 
-//    ui->DataTable->insertRow(ui->DataTable->rowCount());
-//    int rowCounter = ui->DataTable->rowCount()-1;
-
-//    ui->DataTable->setItem(rowCounter, 0, new QTableWidgetItem(First));
-//    ui->DataTable->setItem(rowCounter, 1, new QTableWidgetItem(Last));
-//    ui->DataTable->setItem(rowCounter, 2, new QTableWidgetItem(Salary));
-//    ui->DataTable->setItem(rowCounter, 3, new QTableWidgetItem(Hire));
+    ui->DataTable->setItem(rowCounter, 0, new QTableWidgetItem(First));
+    ui->DataTable->setItem(rowCounter, 1, new QTableWidgetItem(Last));
+    ui->DataTable->setItem(rowCounter, 2, new QTableWidgetItem(Salary));
+    ui->DataTable->setItem(rowCounter, 3, new QTableWidgetItem(Hire));
 
 }
