@@ -29,7 +29,7 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -63,13 +63,13 @@
     <item>
      <widget class="QLabel" name="HiringYearLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>Hiring Year</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -80,7 +80,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLineEdit" name="FileNameBox"/>
+     <widget class="QLineEdit" name="FirstNameBox"/>
     </item>
     <item>
      <widget class="QLineEdit" name="LastNameBox"/>
