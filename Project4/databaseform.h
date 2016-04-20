@@ -26,6 +26,9 @@ private:
 
 private slots:
     void on_AddRecordButton_clicked();
+    void on_actionSave_triggered();
+
+
 };
 
 #endif // DATABASEFORM_H
