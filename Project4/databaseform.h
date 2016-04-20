@@ -19,6 +19,11 @@ public:
 private:
     Ui::DatabaseForm *ui;
 
+    enum Columns
+    {
+        FN, LN, S, HY
+    };
+
 private slots:
     void on_AddRecordButton_clicked();
 };
