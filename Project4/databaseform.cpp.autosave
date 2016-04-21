@@ -39,3 +39,8 @@ void DatabaseForm::on_AddRecordButton_clicked()
     ui->DataTable->setItem(rowCounter, 2, new QTableWidgetItem(Salary));
     ui->DataTable->setItem(rowCounter, 3, new QTableWidgetItem(Hire));
 }
+
+void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
+{
+    
+}
