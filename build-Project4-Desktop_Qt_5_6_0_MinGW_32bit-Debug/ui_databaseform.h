@@ -45,6 +45,7 @@ public:
         DatabaseForm->resize(887, 348);
         actionSave = new QAction(DatabaseForm);
         actionSave->setObjectName(QStringLiteral("actionSave"));
+        actionSave->setCheckable(false);
         centralWidget = new QWidget(DatabaseForm);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         DataTable = new QTableWidget(centralWidget);
