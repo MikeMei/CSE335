@@ -17,7 +17,9 @@ SOURCES += main.cpp\
     addrecordform.cpp
 
 HEADERS  += databaseform.h \
-    addrecordform.h
+    addrecordform.h \
+    employee.h \
+    employeedb.h
 
 FORMS    += databaseform.ui \
     addrecordform.ui

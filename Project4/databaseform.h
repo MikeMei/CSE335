@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <QTableWidget>
-
+#include "employee.h"
+#include "employeedb.h"
 namespace Ui {
 class DatabaseForm;
 }

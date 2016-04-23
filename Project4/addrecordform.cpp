@@ -1,6 +1,7 @@
 #include "addrecordform.h"
 #include "ui_addrecordform.h"
-
+#include "employee.h"
+//observer
 AddRecordForm::AddRecordForm(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddRecordForm)

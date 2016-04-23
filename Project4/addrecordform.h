@@ -2,7 +2,9 @@
 #define ADDRECORDFORM_H
 
 #include <QDialog>
-
+#include "employee.h"
+#include "employeedb.h"
+//observer class
 namespace Ui {
 class AddRecordForm;
 }
@@ -12,9 +14,7 @@ class AddRecordForm : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddRecordForm(QWidget *parent = 0);
-    ~AddRecordForm();
-
+    explicit AddRecordForm(QWidget *parent = 0);s
     QString getFirstName() const;
     QString getLastName() const;
     QString getSalary() const;
