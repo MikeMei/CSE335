@@ -14,7 +14,7 @@ class AddRecordForm : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddRecordForm(QWidget *parent = 0);s
+    explicit AddRecordForm(QWidget *parent = 0);
     QString getFirstName() const;
     QString getLastName() const;
     QString getSalary() const;

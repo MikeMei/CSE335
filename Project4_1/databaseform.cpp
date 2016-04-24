@@ -32,6 +32,11 @@ void DatabaseForm::on_AddRecordButton_clicked()
     QString Last = form->getLastName();
     QString Salary = form->getSalary();
     QString Hire = form->getHiringYear();
+    form->setEmployeeFirstName();
+    form->setEmployeeLastName();
+    form->setEmployeeSalary();
+    form->setEmployeeHiringYear();
+    employeeDB.addEmployee(form->getEmployee());
 
     ui->DataTable->insertRow(ui->DataTable->rowCount());
     int rowCounter = ui->DataTable->rowCount()-1;
@@ -44,7 +49,7 @@ void DatabaseForm::on_AddRecordButton_clicked()
 
 void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
 {
-
+    //do sort in here
 }
 
 void DatabaseForm::on_actionSave_triggered()

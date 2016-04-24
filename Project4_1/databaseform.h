@@ -1,6 +1,8 @@
 #ifndef DATABASEFORM_H
 #define DATABASEFORM_H
 
+#include "employee.h"
+#include "employeedb.h"
 #include <QMainWindow>
 #include <QTableWidget>
 
@@ -12,7 +14,9 @@ class DatabaseForm : public QMainWindow
 {
     Q_OBJECT
 
+
 public:
+    EmployeeDB employeeDB;
     explicit DatabaseForm(QWidget *parent = 0);
     ~DatabaseForm();
 

@@ -14,8 +14,10 @@ AddRecordForm::~AddRecordForm()
 }
 
 QString AddRecordForm::getFirstName() const
-{
-    return ui->FirstNameBox->text();
+{   QString temp = ui->FirstNameBox->text();
+    //emp.setFirstName(temp.toStdString());
+
+    return temp;
 }
 
 QString AddRecordForm::getLastName() const
@@ -31,6 +33,26 @@ QString AddRecordForm::getSalary() const
 QString AddRecordForm::getHiringYear() const
 {
     return ui->HiringYearBox->text();
+}
+
+void AddRecordForm::setEmployeeFirstName() {
+    QString temp = ui->FirstNameBox->text();
+    emp.setFirstName(temp.toStdString());
+}
+void AddRecordForm::setEmployeeLastName() {
+    QString temp = ui->LastNameBox->text();
+    emp.setLastName(temp.toStdString());
+}
+void AddRecordForm::setEmployeeSalary() {
+    QString temp = ui->SalaryBox->text();
+    emp.setsalary(temp.toInt());
+}
+void AddRecordForm::setEmployeeHiringYear() {
+    QString temp = ui->HiringYearBox->text();
+    emp.sethiringYear(temp.toInt());
+}
+Employee* AddRecordForm::getEmployee(){
+    return &emp;
 }
 
 void AddRecordForm::on_buttonBox_accepted()

@@ -9,9 +9,9 @@ public:
     employeeDB (vector<Employee*> list) {
         empDB = list;
     }
-    void AddEmployee(CEmployee* emp)
+    void AddEmployee(Employee* emp)
     {
-        emp_list.push_back(emp);
+        empDB.push_back(emp);
     }
 private:
     vector<Employee*> empDB;
