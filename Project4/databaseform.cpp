@@ -1,6 +1,7 @@
 #include "databaseform.h"
 #include "ui_databaseform.h"
 #include "addrecordform.h"
+#include "employee.h"
 #include <QFile>
 #include <QTextStream>
 using namespace std;
@@ -44,7 +45,18 @@ void DatabaseForm::on_AddRecordButton_clicked()
 
 void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
 {
+    //sort the table
+    //i and j used to navigate through the table
+    // n and m = max size of row and column
 
+    int n = ui->DataTable->rowCount();
+    int m = ui->DataTable->columnCount();
+
+    for(int j = 0; j< n; ++j ) {
+        for(int i = 0; i<m; ++i) {
+
+        }
+    }
 }
 
 void DatabaseForm::on_actionSave_triggered()
