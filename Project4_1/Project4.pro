@@ -44,3 +44,5 @@ HEADERS  += databaseform.h \
 
 FORMS    += databaseform.ui \
     addrecordform.ui
+	
+CONFIG += c++11

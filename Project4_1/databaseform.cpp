@@ -103,4 +103,5 @@ void DatabaseForm::on_actionSave_triggered()
         concreteBuilderTab tab(employeeDB);
 
         comma.printToFile();
+        tab.printToFile();
 }

@@ -10,7 +10,8 @@ class concreteBuilderTab
 {
 protected:
     abstractBuilder* Builder;
-    QString FN, LN, S, HY;
+    string FN, LN, S, HY;
+    vector<Employee*> empdb;
 
 public:
 //    concreteBuilderComma(QString First, QString Last, QString Sal, QString Hire)
@@ -21,52 +22,36 @@ public:
 //        HY = Hire;
 //    }
 
-    concreteBuilderComma()
+    concreteBuilderTab(EmployeeDB emp)
     {
-
+        empdb = emp.getEmployeeVector();
     }
 
     void printToFile()
     {
-            QFile outputTab("output_tab.txt");
-            outputTab.open(QIODevice::WriteOnly);
+//        QFile outputTab("output_tab.txt");
+//        outputTab.open(QIODevice::WriteOnly);
 
-            QTextStream streamTab(&outputTab);
+        ofstream outputTab;
+        outputTab.open("output_tab.txt");
 
-            streamTab << "FirstName\tLastName\tSalary\tHireYear\t\r\n";
+//        QTextStream streamTab(&outputTab);
 
-            for(int i = 0; i <  ui->DataTable->rowCount(); i++)
-            {
-                for(int j = 0; j < ui->DataTable->columnCount(); j++)
-                {
-                    streamTab << ui->DataTable->item(i,j)->text() << "\t";
-                }
-                streamTab << "\r\n";
-            }
+//        streamTab << "FirstName\tLastName\tSalary\tHireYear\t\n";
+        outputTab << "FirstName\tLastName\tSalary\tHireYear\t\n";
 
-            outputTab.close();
+        for(int i = 0; i < empdb.size(); i++)
+        {
+            FN = empdb[i]->getFirstName();
+            LN = empdb[i]->getLastName();
+            S = to_string(empdb[i]->getSalary());
+            HY = to_string(empdb[i]->getHiringYear());
+
+//            streamTab << FN << "\t" << LN << "\t" << S << "\t" << HY << "\n";
+            outputTab << FN << "\t" << LN << "\t" << S << "\t" << HY << "\n";
+        }
+        outputTab.close();
     }
-
-
-//    void addFirstName(QString FN)
-//    {
-
-//    }
-
-//    void addLastName(QString LN)
-//    {
-
-//    }
-
-//    void addSalary(QString S)
-//    {
-
-//    }
-
-//    void addHireYear(QString HY)
-//    {
-
-//    }
 };
 
 #endif // CONCRETEBUILDERTAB_H
