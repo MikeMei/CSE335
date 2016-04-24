@@ -27,6 +27,7 @@ class DatabaseForm : public QMainWindow
 
 public:
     EmployeeDB employeeDB;
+    bool sortOtherDirection;
     explicit DatabaseForm(QWidget *parent = 0);
     ~DatabaseForm();
 
@@ -37,6 +38,7 @@ private slots:
     void on_AddRecordButton_clicked();
     void on_DataTable_clicked(const QModelIndex &index);
     void on_actionSave_triggered();
+    void on_SectionClick(int col);
 };
 
 #endif // DATABASEFORM_H
