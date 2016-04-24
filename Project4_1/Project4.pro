@@ -29,7 +29,18 @@ HEADERS  += databaseform.h \
     sortablebyfirstname.h \
     sortablebylastname.h \
     sortablebysalary.h \
-    sortablebyhiringyear.h
+    sortablebyhiringyear.h \
+    ../../../Qt stuff/Project4/abstractbuilder.h \
+    ../../../Qt stuff/Project4/assembledata.h \
+    ../../../Qt stuff/Project4/concretebuildercomma.h \
+    ../../../Qt stuff/Project4/concretebuildertab.h \
+    ../../../Qt stuff/Project4/abstractbuilder.h \
+    ../../../Qt stuff/Project4/assembledata.h \
+    ../../../Qt stuff/Project4/concretebuildercomma.h \
+    ../../../Qt stuff/Project4/concretebuildertab.h \
+    abstractbuilder.h \
+    concretebuildercomma.h \
+    concretebuildertab.h
 
 FORMS    += databaseform.ui \
     addrecordform.ui
