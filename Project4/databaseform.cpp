@@ -2,6 +2,7 @@
 #include "ui_databaseform.h"
 #include "addrecordform.h"
 #include <QFile>
+#include <QTextStream>
 using namespace std;
 
 DatabaseForm::DatabaseForm(QWidget *parent) :
@@ -48,22 +49,46 @@ void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
 
 void DatabaseForm::on_actionSave_triggered()
 {
-    QFile file("C:/Users/bollavaram/Desktop/someFile.txt");
+//    QFile file("someFile.txt");
 
-     if (file.open(QIODevice::WriteOnly))
-     {
-         QDataStream stream(&file);
-         qint32 n = ui->DataTable->rowCount();
-         qint32 m = ui->DataTable->columnCount();
-         stream << n << m;
+//     if (file.open(QIODevice::WriteOnly))
+//     {
+//         QDataStream stream(&file);
+//         qint32 n = ui->DataTable->rowCount();
+//         qint32 m = ui->DataTable->columnCount();
+//         stream << n << m;
 
-         for (int i=0; i<n; ++i)
-         {
-          for (int j=0; j<m; j++)
-            {
-              ui->DataTable->item(i,j)->write(stream);
-            }
-          }
-        file.close();
-      }
+//         for (int i=0; i<n; ++i)
+//         {
+//          for (int j=0; j<m; j++)
+//            {
+//              ui->DataTable->item(i,j)->write(stream);
+//            }
+//          }
+//        file.close();
+//      }
+    QFile outputComma("output_comma.txt");
+    QFile outputTab("output_tab.txt");
+    outputComma.open(QIODevice::WriteOnly);
+    outputTab.open(QIODevice::WriteOnly);
+
+    QTextStream streamComma(&outputComma);
+    QTextStream streamTab(&outputTab);
+
+    streamComma << "FirstName, LastName, Salary, HireYear\r\n";
+    streamTab << "FirstName\tLastName\tSalary\tHireYear\t\r\n";
+
+    for(int i = 0; i <  ui->DataTable->rowCount(); i++)
+    {
+        for(int j = 0; j < ui->DataTable->columnCount(); j++)
+        {
+            streamComma << ui->DataTable->item(i,j)->text() << ", ";
+            streamTab << ui->DataTable->item(i,j)->text() << "\t";
+        }
+        streamComma << "\r\n";
+        streamTab << "\r\n";
+    }
+
+    outputComma.close();
+    outputTab.close();
 }
