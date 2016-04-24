@@ -61,7 +61,12 @@ DIST          =  ..\Project4_1\databaseform.h \
 		..\Project4_1\sortablevector.h \
 		..\Project4_1\bubblesortdecreasing.h \
 		..\Project4_1\bubblesortincreasing.h \
-		..\Project4_1\sortableemployeedatabase.h ..\Project4_1\main.cpp \
+		..\Project4_1\sortableemployeedatabase.h \
+		..\Project4_1\bubblesortdecreasing.h \
+		..\Project4_1\sortablebyfirstname.h \
+		..\Project4_1\sortablebylastname.h \
+		..\Project4_1\sortablebysalary.h \
+		..\Project4_1\sortablebyhiringyear.h ..\Project4_1\main.cpp \
 		..\Project4_1\databaseform.cpp \
 		..\Project4_1\addrecordform.cpp
 QMAKE_TARGET  = Project4
@@ -78,7 +83,7 @@ $(DESTDIR_TARGET): ui_databaseform.h ui_addrecordform.h $(OBJECTS)
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile.Debug ..\Project4_1\Project4.pro
+	@$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile.Debug ..\Project4_1\Project4.pro
 
 qmake_all: FORCE
 
@@ -232,6 +237,12 @@ debug/moc_databaseform.cpp: ../Project4_1/employee.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qstyle.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qrubberband.h \
+		../Project4_1/bubblesorttemplate.h \
+		../Project4_1/sortablevector.h \
+		../Project4_1/bubblesortincreasing.h \
+		../Project4_1/bubblesortdecreasing.h \
+		../Project4_1/sortableemployeedatabase.h \
+		../Project4_1/sortablebyfirstname.h \
 		../Project4_1/databaseform.h
 	C:\Qt\5.6\mingw49_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.6/mingw49_32/mkspecs/win32-g++ -IC:/Users/laptop-pc/Documents/GitHub/CSE335/Project4_1 -IC:/Qt/5.6/mingw49_32/include -IC:/Qt/5.6/mingw49_32/include/QtWidgets -IC:/Qt/5.6/mingw49_32/include/QtGui -IC:/Qt/5.6/mingw49_32/include/QtANGLE -IC:/Qt/5.6/mingw49_32/include/QtCore -I. ..\Project4_1\databaseform.h -o debug\moc_databaseform.cpp
 
@@ -496,6 +507,12 @@ debug/main.o: ../Project4_1/main.cpp ../Project4_1/databaseform.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qstyle.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qrubberband.h \
+		../Project4_1/bubblesorttemplate.h \
+		../Project4_1/sortablevector.h \
+		../Project4_1/bubblesortincreasing.h \
+		../Project4_1/bubblesortdecreasing.h \
+		../Project4_1/sortableemployeedatabase.h \
+		../Project4_1/sortablebyfirstname.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QApplication \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.6/mingw49_32/include/QtCore/qcoreapplication.h \
@@ -633,6 +650,12 @@ debug/databaseform.o: ../Project4_1/databaseform.cpp ../Project4_1/databaseform.
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qstyle.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qrubberband.h \
+		../Project4_1/bubblesorttemplate.h \
+		../Project4_1/sortablevector.h \
+		../Project4_1/bubblesortincreasing.h \
+		../Project4_1/bubblesortdecreasing.h \
+		../Project4_1/sortableemployeedatabase.h \
+		../Project4_1/sortablebyfirstname.h \
 		ui_databaseform.h \
 		C:/Qt/5.6/mingw49_32/include/QtCore/QVariant \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QAction \

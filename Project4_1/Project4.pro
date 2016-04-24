@@ -19,7 +19,17 @@ SOURCES += main.cpp\
 HEADERS  += databaseform.h \
     addrecordform.h \
     employee.h \
-    employeedb.h
+    employeedb.h \
+    bubblesorttemplate.h \
+    sortablevector.h \
+    bubblesortdecreasing.h \
+    bubblesortincreasing.h \
+    sortableemployeedatabase.h \
+    bubblesortdecreasing.h \
+    sortablebyfirstname.h \
+    sortablebylastname.h \
+    sortablebysalary.h \
+    sortablebyhiringyear.h
 
 FORMS    += databaseform.ui \
     addrecordform.ui

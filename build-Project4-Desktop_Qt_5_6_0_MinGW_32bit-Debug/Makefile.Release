@@ -56,7 +56,12 @@ OBJECTS       = release/main.o \
 DIST          =  ..\Project4_1\databaseform.h \
 		..\Project4_1\addrecordform.h \
 		..\Project4_1\employee.h \
-		..\Project4_1\employeedb.h ..\Project4_1\main.cpp \
+		..\Project4_1\employeedb.h \
+		..\Project4_1\bubblesorttemplate.h \
+		..\Project4_1\sortablevector.h \
+		..\Project4_1\bubblesortdecreasing.h \
+		..\Project4_1\bubblesortincreasing.h \
+		..\Project4_1\sortableemployeedatabase.h ..\Project4_1\main.cpp \
 		..\Project4_1\databaseform.cpp \
 		..\Project4_1\addrecordform.cpp
 QMAKE_TARGET  = Project4
@@ -100,7 +105,9 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: release/moc_databaseform.cpp release/moc_addrecordform.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) release\moc_databaseform.cpp release\moc_addrecordform.cpp
-release/moc_databaseform.cpp: C:/Qt/5.6/mingw49_32/include/QtWidgets/QMainWindow \
+release/moc_databaseform.cpp: ../Project4_1/employee.h \
+		../Project4_1/employeedb.h \
+		C:/Qt/5.6/mingw49_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qwidget.h \
 		C:/Qt/5.6/mingw49_32/include/QtGui/qwindowdefs.h \
@@ -228,7 +235,9 @@ release/moc_databaseform.cpp: C:/Qt/5.6/mingw49_32/include/QtWidgets/QMainWindow
 		../Project4_1/databaseform.h
 	C:\Qt\5.6\mingw49_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.6/mingw49_32/mkspecs/win32-g++ -IC:/Users/laptop-pc/Documents/GitHub/CSE335/Project4_1 -IC:/Qt/5.6/mingw49_32/include -IC:/Qt/5.6/mingw49_32/include/QtWidgets -IC:/Qt/5.6/mingw49_32/include/QtGui -IC:/Qt/5.6/mingw49_32/include/QtANGLE -IC:/Qt/5.6/mingw49_32/include/QtCore -I. ..\Project4_1\databaseform.h -o release\moc_databaseform.cpp
 
-release/moc_addrecordform.cpp: C:/Qt/5.6/mingw49_32/include/QtWidgets/QDialog \
+release/moc_addrecordform.cpp: ../Project4_1/employee.h \
+		../Project4_1/employeedb.h \
+		C:/Qt/5.6/mingw49_32/include/QtWidgets/QDialog \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qdialog.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qwidget.h \
 		C:/Qt/5.6/mingw49_32/include/QtGui/qwindowdefs.h \
@@ -360,6 +369,8 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 release/main.o: ../Project4_1/main.cpp ../Project4_1/databaseform.h \
+		../Project4_1/employee.h \
+		../Project4_1/employeedb.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qwidget.h \
@@ -495,6 +506,8 @@ release/main.o: ../Project4_1/main.cpp ../Project4_1/databaseform.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Project4_1\main.cpp
 
 release/databaseform.o: ../Project4_1/databaseform.cpp ../Project4_1/databaseform.h \
+		../Project4_1/employee.h \
+		../Project4_1/employeedb.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qwidget.h \
@@ -656,6 +669,8 @@ release/databaseform.o: ../Project4_1/databaseform.cpp ../Project4_1/databasefor
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\databaseform.o ..\Project4_1\databaseform.cpp
 
 release/addrecordform.o: ../Project4_1/addrecordform.cpp ../Project4_1/addrecordform.h \
+		../Project4_1/employee.h \
+		../Project4_1/employeedb.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QDialog \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qdialog.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qwidget.h \

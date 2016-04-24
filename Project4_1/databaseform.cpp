@@ -28,10 +28,12 @@ void DatabaseForm::on_AddRecordButton_clicked()
     {
         return;
     }
+    //set values in table
     QString First = form->getFirstName();
     QString Last = form->getLastName();
     QString Salary = form->getSalary();
     QString Hire = form->getHiringYear();
+    //update employee
     form->setEmployeeFirstName();
     form->setEmployeeLastName();
     form->setEmployeeSalary();
@@ -49,7 +51,21 @@ void DatabaseForm::on_AddRecordButton_clicked()
 
 void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
 {
+    //** not in clicked
+    // use data-table_ section clicked
     //do sort in here
+    //sort the employeeDB
+    //re-assign values to table
+    /*
+    for(int i = 0; i < ui->DataTable->rowCount(); i++) {
+        for(int j = 0; j < ui->DataTable->columnCount(); i++) {
+            ui->DataTable->setItem(i, 0, new QTableWidgetItem("lol"));
+            ui->DataTable->setItem(i, 1, new QTableWidgetItem("lol"));
+            ui->DataTable->setItem(i, 2, new QTableWidgetItem("lol"));
+            ui->DataTable->setItem(i, 3, new QTableWidgetItem("lol"));
+        }
+    }
+    */
 }
 
 void DatabaseForm::on_actionSave_triggered()

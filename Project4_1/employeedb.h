@@ -4,7 +4,7 @@
 #include "employee.h"
 #include <vector>
 class EmployeeDB {
-private:
+protected:
     vector<Employee*> empDB;
 public:
 
@@ -22,7 +22,7 @@ public:
     void addEmployee(Employee* emp) {
         empDB.push_back(emp);
     }
-    Employee* getEmployee(int i) {
+    Employee* getEmployee(int i) const{
         return empDB[i];
     }
 };

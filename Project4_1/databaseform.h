@@ -5,6 +5,16 @@
 #include "employeedb.h"
 #include <QMainWindow>
 #include <QTableWidget>
+//sorting stuff
+#include "bubblesorttemplate.h"
+#include "bubblesortincreasing.h"
+#include "bubblesortdecreasing.h"
+#include "sortablevector.h"
+#include "sortableemployeedatabase.h"
+#include "sortablebyfirstname.h"
+#include "sortablebylastname.h"
+#include "sortablebysalary.h"
+#include "sortablebyhiringyear.h"
 
 namespace Ui {
 class DatabaseForm;
