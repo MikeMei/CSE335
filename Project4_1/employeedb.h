@@ -25,6 +25,10 @@ public:
     Employee* getEmployee(int i) const{
         return empDB[i];
     }
+    vector<Employee*> getEmployeeVector()
+    {
+        return empDB;
+    }
 };
 
 #endif // EMPLOYEEDB_H
