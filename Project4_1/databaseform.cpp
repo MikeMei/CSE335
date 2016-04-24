@@ -54,97 +54,87 @@ void DatabaseForm::on_AddRecordButton_clicked()
     ui->DataTable->setItem(rowCounter, 3, new QTableWidgetItem(Hire));
 }
 
-void DatabaseForm::on_DataTable_clicked(const QModelIndex &index)
-{
-    //** not in clicked
-    // use data-table_ section clicked
-    //do sort in here
-    //sort the employeeDB
-    //re-assign values to table
-    /*
-    for(int i = 0; i < ui->DataTable->rowCount(); i++) {
-        for(int j = 0; j < ui->DataTable->columnCount(); i++) {
-            ui->DataTable->setItem(i, 0, new QTableWidgetItem("lol"));
-            ui->DataTable->setItem(i, 1, new QTableWidgetItem("lol"));
-            ui->DataTable->setItem(i, 2, new QTableWidgetItem("lol"));
-            ui->DataTable->setItem(i, 3, new QTableWidgetItem("lol"));
-        }
-    }
-    */
-}
-
 void DatabaseForm::on_SectionClick(int col) {
-
+    /*
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
     vector<Employee*> temp = employeeDB.getEmployeeVector();
     vector<Employee*> sorted;
+    */
     if(col == 0 && sortOtherDirection == false) {
-         //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByFirstName sbfn(temp);
         bsi.sort(&sbfn);
         sorted = sbfn.getEmployeeVector();
+        */
         sortOtherDirection = true;
     }
     else if(col == 1 && sortOtherDirection == false) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByLastName sbln(temp);
         bsi.sort(&sbln);
         sorted = sbln.getEmployeeVector();
+        */
         sortOtherDirection = true;
     }
     else if(col == 2 && sortOtherDirection == false) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableBySalary sbs(temp);
         bsi.sort(&sbs);
         sorted = sbs.getEmployeeVector();
+        */
         sortOtherDirection = true;
     }
     else if(col == 3 && sortOtherDirection == false) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByHiringYear sbh(temp);
         bsi.sort(&sbh);
         sorted = sbh.getEmployeeVector();
+        */
         sortOtherDirection = true;
     }
     if(col == 0 && sortOtherDirection == true) {
-         //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByFirstName sbfn(temp);
         bsd.sort(&sbfn);
         sorted = sbfn.getEmployeeVector();
+        */
         sortOtherDirection = false;
     }
     else if(col == 1 && sortOtherDirection == true) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByLastName sbln(temp);
         bsi.sort(&sbln);
         sorted = sbln.getEmployeeVector();
         sortOtherDirection = false;
+        */
     }
     else if(col == 2 && sortOtherDirection == true) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableBySalary sbs(temp);
         bsi.sort(&sbs);
         sorted = sbs.getEmployeeVector();
         sortOtherDirection = false;
+        */
     }
     else if(col == 3 && sortOtherDirection == true) {
-        //ui->DataTable->setItem(0, col, new QTableWidgetItem("lol"));
+        /*
         SortableByHiringYear sbh(temp);
         bsi.sort(&sbh);
         sorted = sbh.getEmployeeVector();
         sortOtherDirection = false;
+        */
     }
 
 
 
     for(int i = 0; i < ui->DataTable->rowCount(); i++) {
-        Employee* temp2 = sorted[i];
+        //Employee* temp2 = sorted[i];
         for(int j = 0; j < ui->DataTable->columnCount(); i++) {
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getFirstName()));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getLastName()));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getSalary()));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getHiringYear()));
+            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getFirstName()));
+            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getLastName()));
+            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getSalary()));
+            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getHiringYear()));
         }
     }
 

@@ -36,7 +36,7 @@ private:
 
 private slots:
     void on_AddRecordButton_clicked();
-    void on_DataTable_clicked(const QModelIndex &index);
+
     void on_actionSave_triggered();
     void on_SectionClick(int col);
 };

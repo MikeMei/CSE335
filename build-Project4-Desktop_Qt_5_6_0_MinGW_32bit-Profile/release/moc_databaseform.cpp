@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_DatabaseForm_t {
     QByteArrayData data[6];
-    char stringdata0[92];
+    char stringdata0[85];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,14 +32,14 @@ static const qt_meta_stringdata_DatabaseForm_t qt_meta_stringdata_DatabaseForm =
 QT_MOC_LITERAL(0, 0, 12), // "DatabaseForm"
 QT_MOC_LITERAL(1, 13, 26), // "on_AddRecordButton_clicked"
 QT_MOC_LITERAL(2, 40, 0), // ""
-QT_MOC_LITERAL(3, 41, 20), // "on_DataTable_clicked"
-QT_MOC_LITERAL(4, 62, 5), // "index"
-QT_MOC_LITERAL(5, 68, 23) // "on_actionSave_triggered"
+QT_MOC_LITERAL(3, 41, 23), // "on_actionSave_triggered"
+QT_MOC_LITERAL(4, 65, 15), // "on_SectionClick"
+QT_MOC_LITERAL(5, 81, 3) // "col"
 
     },
     "DatabaseForm\0on_AddRecordButton_clicked\0"
-    "\0on_DataTable_clicked\0index\0"
-    "on_actionSave_triggered"
+    "\0on_actionSave_triggered\0on_SectionClick\0"
+    "col"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,13 +58,13 @@ static const uint qt_meta_data_DatabaseForm[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    0,   29,    2, 0x08 /* Private */,
-       3,    1,   30,    2, 0x08 /* Private */,
-       5,    0,   33,    2, 0x08 /* Private */,
+       3,    0,   30,    2, 0x08 /* Private */,
+       4,    1,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex,    4,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    5,
 
        0        // eod
 };
@@ -76,8 +76,8 @@ void DatabaseForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_AddRecordButton_clicked(); break;
-        case 1: _t->on_DataTable_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 2: _t->on_actionSave_triggered(); break;
+        case 1: _t->on_actionSave_triggered(); break;
+        case 2: _t->on_SectionClick((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
