@@ -55,12 +55,17 @@ void DatabaseForm::on_AddRecordButton_clicked()
 }
 
 void DatabaseForm::on_SectionClick(int col) {
+    //unable to create sortable object
+
     /*
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
     vector<Employee*> temp = employeeDB.getEmployeeVector();
     vector<Employee*> sorted;
     */
+
+    //vector<Employee*> temp = employeeDB.getEmployeeVector();
+    //SortableByFirstName sbfn(temp);
     if(col == 0 && sortOtherDirection == false) {
         /*
         SortableByFirstName sbfn(temp);
@@ -130,11 +135,16 @@ void DatabaseForm::on_SectionClick(int col) {
 
     for(int i = 0; i < ui->DataTable->rowCount(); i++) {
         //Employee* temp2 = sorted[i];
-        for(int j = 0; j < ui->DataTable->columnCount(); i++) {
-            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getFirstName()));
-            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getLastName()));
-            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getSalary()));
-            //ui->DataTable->setItem(i, j, new QTableWidgetItem(temp2->getHiringYear()));
+        Employee* temp3 = employeeDB.getEmployee(i);
+        QString FN = QString::fromStdString(temp3->getFirstName());
+        QString LN = QString::fromStdString(temp3->getLastName());
+        QString S = QString::number(temp3->getSalary());
+        QString H = QString::number(temp3->getHiringYear());
+        for(int j = 0; j < ui->DataTable->columnCount(); j++) {
+            ui->DataTable->setItem(i, j, new QTableWidgetItem(FN));
+            ui->DataTable->setItem(i, j, new QTableWidgetItem(LN));
+            ui->DataTable->setItem(i, j, new QTableWidgetItem(S));
+            ui->DataTable->setItem(i, j, new QTableWidgetItem(H));
         }
     }
 

@@ -11,7 +11,9 @@ class SortableEmployeeDatabase: public SortableVector, public EmployeeDB {
 public:
     /* Default Constructor
      */
-    SortableEmployeeDatabase() {};
+    SortableEmployeeDatabase() {
+
+    };
     /* Constructor
      */
     SortableEmployeeDatabase(vector <Employee*> &EmployeeVector): EmployeeDB(EmployeeVector) {};
