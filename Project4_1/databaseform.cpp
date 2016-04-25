@@ -57,21 +57,19 @@ void DatabaseForm::on_AddRecordButton_clicked()
 void DatabaseForm::on_SectionClick(int col) {
     //unable to create sortable object
 
-    /*
+
     BubbleSortIncreasing bsi;
     BubbleSortDecreasing bsd;
     vector<Employee*> temp = employeeDB.getEmployeeVector();
     vector<Employee*> sorted;
-    */
 
-    //vector<Employee*> temp = employeeDB.getEmployeeVector();
-    //SortableByFirstName sbfn(temp);
+
     if(col == 0 && sortOtherDirection == false) {
-        /*
-        SortableByFirstName sbfn(temp);
-        bsi.sort(&sbfn);
-        sorted = sbfn.getEmployeeVector();
-        */
+        //cannot declare variable 'sbfn' to be of abstract type 'SortableByFirstName'
+        //SortableByFirstName sbfn(temp);
+        //bsi.sort(&sbfn);
+        //sorted = sbfn.getEmployeeVector();
+
         sortOtherDirection = true;
     }
     else if(col == 1 && sortOtherDirection == false) {
@@ -132,7 +130,7 @@ void DatabaseForm::on_SectionClick(int col) {
     }
 
 
-
+    // Goes through the employeeDB and sets each value in the table
     for(int i = 0; i < ui->DataTable->rowCount(); i++) {
         //Employee* temp2 = sorted[i];
         Employee* temp3 = employeeDB.getEmployee(i);

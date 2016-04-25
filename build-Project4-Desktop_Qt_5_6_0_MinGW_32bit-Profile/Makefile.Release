@@ -66,7 +66,26 @@ DIST          =  ..\Project4_1\databaseform.h \
 		..\Project4_1\sortablebyfirstname.h \
 		..\Project4_1\sortablebylastname.h \
 		..\Project4_1\sortablebysalary.h \
-		..\Project4_1\sortablebyhiringyear.h ..\Project4_1\main.cpp \
+		..\Project4_1\sortablebyhiringyear.h \
+		..\..\..\Qt \
+		stuff\Project4\abstractbuilder.h \
+		..\..\..\Qt \
+		stuff\Project4\assembledata.h \
+		..\..\..\Qt \
+		stuff\Project4\concretebuildercomma.h \
+		..\..\..\Qt \
+		stuff\Project4\concretebuildertab.h \
+		..\..\..\Qt \
+		stuff\Project4\abstractbuilder.h \
+		..\..\..\Qt \
+		stuff\Project4\assembledata.h \
+		..\..\..\Qt \
+		stuff\Project4\concretebuildercomma.h \
+		..\..\..\Qt \
+		stuff\Project4\concretebuildertab.h \
+		..\Project4_1\abstractbuilder.h \
+		..\Project4_1\concretebuildercomma.h \
+		..\Project4_1\concretebuildertab.h ..\Project4_1\main.cpp \
 		..\Project4_1\databaseform.cpp \
 		..\Project4_1\addrecordform.cpp
 QMAKE_TARGET  = Project4
@@ -243,6 +262,9 @@ release/moc_databaseform.cpp: ../Project4_1/employee.h \
 		../Project4_1/bubblesortdecreasing.h \
 		../Project4_1/sortableemployeedatabase.h \
 		../Project4_1/sortablebyfirstname.h \
+		../Project4_1/sortablebylastname.h \
+		../Project4_1/sortablebysalary.h \
+		../Project4_1/sortablebyhiringyear.h \
 		../Project4_1/databaseform.h
 	C:\Qt\5.6\mingw49_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.6/mingw49_32/mkspecs/win32-g++ -IC:/Users/laptop-pc/Documents/GitHub/CSE335/Project4_1 -IC:/Qt/5.6/mingw49_32/include -IC:/Qt/5.6/mingw49_32/include/QtWidgets -IC:/Qt/5.6/mingw49_32/include/QtGui -IC:/Qt/5.6/mingw49_32/include/QtANGLE -IC:/Qt/5.6/mingw49_32/include/QtCore -I. ..\Project4_1\databaseform.h -o release\moc_databaseform.cpp
 
@@ -513,6 +535,9 @@ release/main.o: ../Project4_1/main.cpp ../Project4_1/databaseform.h \
 		../Project4_1/bubblesortdecreasing.h \
 		../Project4_1/sortableemployeedatabase.h \
 		../Project4_1/sortablebyfirstname.h \
+		../Project4_1/sortablebylastname.h \
+		../Project4_1/sortablebysalary.h \
+		../Project4_1/sortablebyhiringyear.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QApplication \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.6/mingw49_32/include/QtCore/qcoreapplication.h \
@@ -656,6 +681,9 @@ release/databaseform.o: ../Project4_1/databaseform.cpp ../Project4_1/databasefor
 		../Project4_1/bubblesortdecreasing.h \
 		../Project4_1/sortableemployeedatabase.h \
 		../Project4_1/sortablebyfirstname.h \
+		../Project4_1/sortablebylastname.h \
+		../Project4_1/sortablebysalary.h \
+		../Project4_1/sortablebyhiringyear.h \
 		ui_databaseform.h \
 		C:/Qt/5.6/mingw49_32/include/QtCore/QVariant \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QAction \
@@ -687,8 +715,11 @@ release/databaseform.o: ../Project4_1/databaseform.cpp ../Project4_1/databasefor
 		../Project4_1/addrecordform.h \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/QDialog \
 		C:/Qt/5.6/mingw49_32/include/QtWidgets/qdialog.h \
+		../Project4_1/concretebuildercomma.h \
 		C:/Qt/5.6/mingw49_32/include/QtCore/QFile \
-		C:/Qt/5.6/mingw49_32/include/QtCore/QTextStream
+		C:/Qt/5.6/mingw49_32/include/QtCore/QTextStream \
+		../Project4_1/abstractbuilder.h \
+		../Project4_1/concretebuildertab.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\databaseform.o ..\Project4_1\databaseform.cpp
 
 release/addrecordform.o: ../Project4_1/addrecordform.cpp ../Project4_1/addrecordform.h \
