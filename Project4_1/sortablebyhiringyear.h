@@ -9,7 +9,7 @@ class SortableByHiringYear: public SortableEmployeeDatabase {
 public:
     /* Default Constructor
      */
-    SortableByHiringYear() {};
+    SortableByHiringYear() : SortableEmployeeDatabase() {};
     /* Constructor
      */
     SortableByHiringYear(vector <Employee*> employeeVector): SortableEmployeeDatabase(employeeVector) {};

@@ -65,79 +65,79 @@ void DatabaseForm::on_SectionClick(int col) {
 
 
     if(col == 0 && sortOtherDirection == false) {
-        //cannot declare variable 'sbfn' to be of abstract type 'SortableByFirstName'
-        //SortableByFirstName sbfn(temp);
-        //bsi.sort(&sbfn);
-        //sorted = sbfn.getEmployeeVector();
+
+        SortableByFirstName sbfn(temp);
+        bsi.sort(&sbfn);
+        sorted = sbfn.getEmployeeVector();
 
         sortOtherDirection = true;
     }
     else if(col == 1 && sortOtherDirection == false) {
-        /*
+
         SortableByLastName sbln(temp);
         bsi.sort(&sbln);
         sorted = sbln.getEmployeeVector();
-        */
+
         sortOtherDirection = true;
     }
     else if(col == 2 && sortOtherDirection == false) {
-        /*
+
         SortableBySalary sbs(temp);
         bsi.sort(&sbs);
         sorted = sbs.getEmployeeVector();
-        */
+
         sortOtherDirection = true;
     }
     else if(col == 3 && sortOtherDirection == false) {
-        /*
+
         SortableByHiringYear sbh(temp);
         bsi.sort(&sbh);
         sorted = sbh.getEmployeeVector();
-        */
+
         sortOtherDirection = true;
     }
     if(col == 0 && sortOtherDirection == true) {
-        /*
+
         SortableByFirstName sbfn(temp);
         bsd.sort(&sbfn);
         sorted = sbfn.getEmployeeVector();
-        */
+
         sortOtherDirection = false;
     }
     else if(col == 1 && sortOtherDirection == true) {
-        /*
+
         SortableByLastName sbln(temp);
         bsi.sort(&sbln);
         sorted = sbln.getEmployeeVector();
         sortOtherDirection = false;
-        */
+
     }
     else if(col == 2 && sortOtherDirection == true) {
-        /*
+
         SortableBySalary sbs(temp);
         bsi.sort(&sbs);
         sorted = sbs.getEmployeeVector();
         sortOtherDirection = false;
-        */
+
     }
     else if(col == 3 && sortOtherDirection == true) {
-        /*
+
         SortableByHiringYear sbh(temp);
         bsi.sort(&sbh);
         sorted = sbh.getEmployeeVector();
         sortOtherDirection = false;
-        */
+
     }
 
 
     // Goes through the employeeDB and sets each value in the table
     for(int i = 0; i < ui->DataTable->rowCount(); i++) {
-        //Employee* temp2 = sorted[i];
-        Employee* temp3 = employeeDB.getEmployee(i);
-        QString FN = QString::fromStdString(temp3->getFirstName());
-        QString LN = QString::fromStdString(temp3->getLastName());
-        QString S = QString::number(temp3->getSalary());
-        QString H = QString::number(temp3->getHiringYear());
+        Employee* temp2 = sorted[i];
+        //Employee* temp3 = employeeDB.getEmployee(i);
+        QString FN = QString::fromStdString(temp2->getFirstName());
+        QString LN = QString::fromStdString(temp2->getLastName());
+        QString S = QString::number(temp2->getSalary());
+        QString H = QString::number(temp2->getHiringYear());
         ui->DataTable->setItem(i, 0, new QTableWidgetItem(FN));
         ui->DataTable->setItem(i, 1, new QTableWidgetItem(LN));
         ui->DataTable->setItem(i, 2, new QTableWidgetItem(S));

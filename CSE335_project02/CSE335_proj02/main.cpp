@@ -71,7 +71,8 @@ int main(int argc, char** argv)
     d1.DisplayRecords();
     
     cout << "************************ After Sorting By FirstName Alphabetical" << endl;
-    SortableByFirstName sbfn(employees);
+    vector<CEmployee*> temp;
+    SortableByFirstName sbfn(temp);
     bsi.sort(&sbfn);
     sbfn.DisplayRecords();
     

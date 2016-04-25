@@ -20,6 +20,9 @@ public:
     /* Copy Constructor
      */
 
+    virtual unsigned int getSize() const  {
+        return getDatabaseSize();
+    }
     virtual void swap(int i, int j  ){
         Employee* temp = empDB[i];
         empDB[i] = empDB[j];

@@ -9,7 +9,7 @@ class SortableByFirstName: public SortableEmployeeDatabase {
 public:
     /* Default Constructor
      */
-    SortableByFirstName() {};
+    SortableByFirstName()  {};
     /* Constructor
      */
     SortableByFirstName(vector<Employee*> employees): SortableEmployeeDatabase(employees) {
