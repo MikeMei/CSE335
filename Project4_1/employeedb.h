@@ -29,6 +29,9 @@ public:
     {
         return empDB;
     }
+    unsigned int getDatabaseSize() const{
+        return empDB.size();
+    }
 };
 
 #endif // EMPLOYEEDB_H

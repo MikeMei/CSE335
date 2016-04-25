@@ -96,7 +96,7 @@ void DatabaseForm::on_SectionClick(int col) {
 
         sortOtherDirection = true;
     }
-    if(col == 0 && sortOtherDirection == true) {
+    else if(col == 0 && sortOtherDirection == true) {
 
         SortableByFirstName sbfn(temp);
         bsd.sort(&sbfn);
