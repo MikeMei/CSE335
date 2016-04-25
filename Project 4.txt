@@ -1,0 +1,11 @@
+-Project 4
+
+Group Members/Netid:
+
+	-Michael Mei: meimicha
+	-Srikar Bollavaram: bollavar
+
+Contributions:
+
+	-Michael: Planning, debugging, sorting functions, Coding of: databaseform.cpp, addrecordform.cpp,
+	-Srikar: Planning, debugging, UI, print to file functions, Coding of: databaseform.cpp, addrecordform.cpp, 
