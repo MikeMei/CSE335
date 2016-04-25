@@ -140,12 +140,11 @@ void DatabaseForm::on_SectionClick(int col) {
         QString LN = QString::fromStdString(temp3->getLastName());
         QString S = QString::number(temp3->getSalary());
         QString H = QString::number(temp3->getHiringYear());
-        for(int j = 0; j < ui->DataTable->columnCount(); j++) {
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(FN));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(LN));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(S));
-            ui->DataTable->setItem(i, j, new QTableWidgetItem(H));
-        }
+        ui->DataTable->setItem(i, 0, new QTableWidgetItem(FN));
+        ui->DataTable->setItem(i, 1, new QTableWidgetItem(LN));
+        ui->DataTable->setItem(i, 2, new QTableWidgetItem(S));
+        ui->DataTable->setItem(i, 3, new QTableWidgetItem(H));
+
     }
 
 }
