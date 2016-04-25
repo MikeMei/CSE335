@@ -107,7 +107,7 @@ void DatabaseForm::on_SectionClick(int col) {
     else if(col == 1 && sortOtherDirection == true) {
 
         SortableByLastName sbln(temp);
-        bsi.sort(&sbln);
+        bsd.sort(&sbln);
         sorted = sbln.getEmployeeVector();
         sortOtherDirection = false;
 
@@ -115,7 +115,7 @@ void DatabaseForm::on_SectionClick(int col) {
     else if(col == 2 && sortOtherDirection == true) {
 
         SortableBySalary sbs(temp);
-        bsi.sort(&sbs);
+        bsd.sort(&sbs);
         sorted = sbs.getEmployeeVector();
         sortOtherDirection = false;
 
@@ -123,7 +123,7 @@ void DatabaseForm::on_SectionClick(int col) {
     else if(col == 3 && sortOtherDirection == true) {
 
         SortableByHiringYear sbh(temp);
-        bsi.sort(&sbh);
+        bsd.sort(&sbh);
         sorted = sbh.getEmployeeVector();
         sortOtherDirection = false;
 
